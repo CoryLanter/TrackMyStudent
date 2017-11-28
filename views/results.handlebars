@@ -1,0 +1,15 @@
+<h3>Voted for {{petName}}.</h3>
+
+{{#if showResults}}
+    <hr />
+    
+        
+    <h2>Here are the results</h2>
+    <ul>
+    {{#each votes}}
+        <li>IP:({{ip}}) - {{timestamp}}</li>
+        {{/each}}
+        </ul>
+
+{{/if}}
+
