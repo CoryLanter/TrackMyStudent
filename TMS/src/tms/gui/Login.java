@@ -27,44 +27,40 @@ public class Login extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         btnFaculty = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
         btnNonFaculty = new javax.swing.JButton();
         btnAdmin = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnFaculty.setText("Faculty");
-        btnFaculty.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnFaculty.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFacultyActionPerformed(evt);
             }
         });
 
-        lblTitle.setText("Select your user group:");
+        lblTitle.setText("Welcome to TMS.");
 
         btnNonFaculty.setText("Non-Faculty");
-        btnNonFaculty.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnNonFaculty.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNonFacultyActionPerformed(evt);
             }
         });
 
         btnAdmin.setText("Admin");
-        btnAdmin.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminActionPerformed(evt);
             }
         });
+
+        jLabel1.setText("Please select user type to begin.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,32 +69,33 @@ public class Login extends javax.swing.JFrame
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblTitle)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnFaculty)
-                                .addGap(30, 30, 30))))
+                        .addGap(148, 148, 148)
+                        .addComponent(lblTitle))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addComponent(btnNonFaculty))
+                        .addGap(59, 59, 59)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnNonFaculty)
+                            .addComponent(btnFaculty)
+                            .addComponent(btnAdmin)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(btnAdmin)))
-                .addContainerGap(145, Short.MAX_VALUE))
+                        .addGap(98, 98, 98)
+                        .addComponent(jLabel1)))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(24, 24, 24)
                 .addComponent(lblTitle)
-                .addGap(52, 52, 52)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(24, 24, 24)
                 .addComponent(btnFaculty)
                 .addGap(28, 28, 28)
                 .addComponent(btnNonFaculty)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(btnAdmin)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         pack();
@@ -176,6 +173,7 @@ public class Login extends javax.swing.JFrame
     private javax.swing.JButton btnAdmin;
     private javax.swing.JButton btnFaculty;
     private javax.swing.JButton btnNonFaculty;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 }
