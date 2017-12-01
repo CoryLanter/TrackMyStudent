@@ -28,31 +28,43 @@ public class Admin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+
+        //jLabel1 to be converted to
         jLabel1 = new javax.swing.JLabel();
+        //jLabel2 to be converted to
         jLabel2 = new javax.swing.JLabel();
+        //jTextField1 to be converted to
         jTextField1 = new javax.swing.JTextField();
+        //jButton1 to be converted to
         jButton1 = new javax.swing.JButton();
+        //jLabel3 to be converted to
         jLabel3 = new javax.swing.JLabel();
+        //jComboBox1 to be converted to
         jComboBox1 = new javax.swing.JComboBox<>();
+        //jLabel4 to be converted to
         jLabel4 = new javax.swing.JLabel();
+        //jButton2 to be converted to
         jButton2 = new javax.swing.JButton();
+        //jButton3 to be converted to
         jButton3 = new javax.swing.JButton();
+        //jButton4 to be converted to
         jButton4 = new javax.swing.JButton();
+        
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
+        //jLabel1 to be converted to
         jLabel1.setText("Welcome Administrator");
-
+        //jLabel2 to be converted to
         jLabel2.setText("To view a Student, enter Student ID:");
-
+        //jButton1 to be converted to
         jButton1.setText("Submit");
-
+        //jLabel3 to be converted to
         jLabel3.setText("To view a classlist, select Teacher's name:");
-
+        //jComboBox1 to be converted to
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Johnson", "Smith", "Eddy", "Brown" }));
-
+        //jButton2 to be converted to
         jButton2.setText("View Change Requests");
-
+         //jButton3 to be converted to
         jButton3.setText("Logout");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
