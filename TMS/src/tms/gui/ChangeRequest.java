@@ -50,6 +50,8 @@ public class ChangeRequest extends javax.swing.JFrame {
         btnMainMenu = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
         radioStudentID = new javax.swing.JRadioButton();
+        radioAddStudent = new javax.swing.JRadioButton();
+        btnDeleteStudent = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,6 +108,10 @@ public class ChangeRequest extends javax.swing.JFrame {
             }
         });
 
+        radioAddStudent.setText("Add a student");
+
+        btnDeleteStudent.setText("Delete a student");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -136,7 +142,9 @@ public class ChangeRequest extends javax.swing.JFrame {
                                 .addGap(29, 29, 29)
                                 .addComponent(radioAllergies)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(radioStudentID))
+                                .addComponent(radioStudentID)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnDeleteStudent))
                             .addComponent(jLabel5)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(169, 169, 169)
@@ -163,7 +171,9 @@ public class ChangeRequest extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(radioSchedule)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(radioGrades)))
+                                .addComponent(radioGrades)
+                                .addGap(32, 32, 32)
+                                .addComponent(radioAddStudent)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -186,13 +196,15 @@ public class ChangeRequest extends javax.swing.JFrame {
                     .addComponent(radioName)
                     .addComponent(radioMedications)
                     .addComponent(radioSchedule)
-                    .addComponent(radioGrades))
+                    .addComponent(radioGrades)
+                    .addComponent(radioAddStudent))
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(radioTeacher)
                     .addComponent(radioAbsences)
                     .addComponent(radioAllergies)
-                    .addComponent(radioStudentID))
+                    .addComponent(radioStudentID)
+                    .addComponent(btnDeleteStudent))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -263,6 +275,7 @@ public class ChangeRequest extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton btnDeleteStudent;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMainMenu;
     private javax.swing.JButton btnSubmit;
@@ -277,6 +290,7 @@ public class ChangeRequest extends javax.swing.JFrame {
     private javax.swing.JLabel lblSelectField;
     private javax.swing.JLabel lblStudentID;
     private javax.swing.JRadioButton radioAbsences;
+    private javax.swing.JRadioButton radioAddStudent;
     private javax.swing.JRadioButton radioAllergies;
     private javax.swing.JRadioButton radioGrades;
     private javax.swing.JRadioButton radioMedications;

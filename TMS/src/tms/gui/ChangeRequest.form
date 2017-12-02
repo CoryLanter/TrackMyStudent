@@ -58,6 +58,8 @@
                               <Component id="radioAllergies" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="radioStudentID" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="btnDeleteStudent" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
@@ -93,6 +95,8 @@
                               <Component id="radioSchedule" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="radioGrades" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="radioAddStudent" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -124,6 +128,7 @@
                   <Component id="radioMedications" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="radioSchedule" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="radioGrades" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="radioAddStudent" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -131,6 +136,7 @@
                   <Component id="radioAbsences" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="radioAllergies" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="radioStudentID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnDeleteStudent" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -267,6 +273,16 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioStudentIDActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radioAddStudent">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add a student"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="btnDeleteStudent">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delete a student"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
