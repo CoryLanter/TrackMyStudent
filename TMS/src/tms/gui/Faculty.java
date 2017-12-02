@@ -28,7 +28,7 @@ public class Faculty extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtStudentId = new javax.swing.JTextField();
+        inputStudentId = new javax.swing.JTextField();
         cmbSelectTeacherName = new javax.swing.JComboBox<>();
         lblEnterStudId = new java.awt.Label();
         lblSelectTeacherName = new java.awt.Label();
@@ -40,9 +40,9 @@ public class Faculty extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txtStudentId.addActionListener(new java.awt.event.ActionListener() {
+        inputStudentId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtStudentIdActionPerformed(evt);
+                inputStudentIdActionPerformed(evt);
             }
         });
 
@@ -89,7 +89,7 @@ public class Faculty extends javax.swing.JFrame {
                                 .addGap(10, 10, 10))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(42, 42, 42)
-                                .addComponent(txtStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(inputStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblSelectTeacherName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -119,7 +119,7 @@ public class Faculty extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblEnterStudId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSubmitStudentId)
                 .addGap(37, 37, 37)
@@ -138,9 +138,9 @@ public class Faculty extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtStudentIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStudentIdActionPerformed
+    private void inputStudentIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputStudentIdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtStudentIdActionPerformed
+    }//GEN-LAST:event_inputStudentIdActionPerformed
 
     private void btnChangeRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeRequestActionPerformed
         // TODO add your handling code here:
@@ -197,9 +197,9 @@ public class Faculty extends javax.swing.JFrame {
     private javax.swing.JButton btnSubmitStudentId;
     private javax.swing.JButton btnSubmitTeacherName;
     private javax.swing.JComboBox<String> cmbSelectTeacherName;
+    private javax.swing.JTextField inputStudentId;
     private java.awt.Label lblEnterStudId;
     private java.awt.Label lblSelectTeacherName;
     private javax.swing.JLabel lblTitle;
-    private javax.swing.JTextField txtStudentId;
     // End of variables declaration//GEN-END:variables
 }

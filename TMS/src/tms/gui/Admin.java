@@ -28,51 +28,39 @@ public class Admin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-
-        //jLabel1 to be converted to
-        jLabel1 = new javax.swing.JLabel();
-        //jLabel2 to be converted to
-        jLabel2 = new javax.swing.JLabel();
-        //jTextField1 to be converted to
-        jTextField1 = new javax.swing.JTextField();
-        //jButton1 to be converted to
-        jButton1 = new javax.swing.JButton();
-        //jLabel3 to be converted to
-        jLabel3 = new javax.swing.JLabel();
-        //jComboBox1 to be converted to
-        jComboBox1 = new javax.swing.JComboBox<>();
-        //jLabel4 to be converted to
+        lblWelcome = new javax.swing.JLabel();
+        lblviewStudent = new javax.swing.JLabel();
+        inputStudentID = new javax.swing.JTextField();
+        btnSubmitViewStudent = new javax.swing.JButton();
+        lblViewTeacher = new javax.swing.JLabel();
+        cmbBoxTeachers = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
-        //jButton2 to be converted to
-        jButton2 = new javax.swing.JButton();
-        //jButton3 to be converted to
-        jButton3 = new javax.swing.JButton();
-        //jButton4 to be converted to
-        jButton4 = new javax.swing.JButton();
-        
+        btnViewChangeRequest = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
+        btnSubmitViewClass = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        //jLabel1 to be converted to
-        jLabel1.setText("Welcome Administrator");
-        //jLabel2 to be converted to
-        jLabel2.setText("To view a Student, enter Student ID:");
-        //jButton1 to be converted to
-        jButton1.setText("Submit");
-        //jLabel3 to be converted to
-        jLabel3.setText("To view a classlist, select Teacher's name:");
-        //jComboBox1 to be converted to
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Johnson", "Smith", "Eddy", "Brown" }));
-        //jButton2 to be converted to
-        jButton2.setText("View Change Requests");
-         //jButton3 to be converted to
-        jButton3.setText("Logout");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+
+        lblWelcome.setText("Welcome Administrator");
+
+        lblviewStudent.setText("To view a Student, enter Student ID:");
+
+        btnSubmitViewStudent.setText("Submit");
+
+        lblViewTeacher.setText("To view a classlist, select Teacher's name:");
+
+        cmbBoxTeachers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Johnson", "Smith", "Eddy", "Brown" }));
+
+        btnViewChangeRequest.setText("View Change Requests");
+
+        btnLogout.setText("Logout");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnLogoutActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Submit");
+        btnSubmitViewClass.setText("Submit");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,32 +68,32 @@ public class Admin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton4)
+                    .addComponent(btnSubmitViewClass)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(142, 142, 142)
-                            .addComponent(jLabel1))
+                            .addComponent(lblWelcome))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(18, 18, 18)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton1)
+                                .addComponent(btnSubmitViewStudent)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel2)
+                                    .addComponent(lblviewStudent)
                                     .addGap(34, 34, 34)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(22, 22, 22))))
                         .addGroup(layout.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(jLabel3)
+                            .addComponent(lblViewTeacher)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cmbBoxTeachers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(18, 18, 18)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButton2)
+                                    .addComponent(btnViewChangeRequest)
                                     .addGap(38, 38, 38)
-                                    .addComponent(jButton3))
+                                    .addComponent(btnLogout))
                                 .addComponent(jLabel4)))))
                 .addContainerGap(10, Short.MAX_VALUE))
         );
@@ -113,37 +101,37 @@ public class Admin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel1)
+                .addComponent(lblWelcome)
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblviewStudent)
+                    .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(btnSubmitViewStudent)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblViewTeacher)
+                    .addComponent(cmbBoxTeachers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
+                .addComponent(btnSubmitViewClass)
                 .addGap(11, 11, 11)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(btnViewChangeRequest)
+                    .addComponent(btnLogout))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton3ActionPerformed
-    {//GEN-HEADEREND:event_jButton3ActionPerformed
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnLogoutActionPerformed
+    {//GEN-HEADEREND:event_btnLogoutActionPerformed
         // TODO add your handling code here:
 	this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,15 +170,15 @@ public class Admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnSubmitViewClass;
+    private javax.swing.JButton btnSubmitViewStudent;
+    private javax.swing.JButton btnViewChangeRequest;
+    private javax.swing.JComboBox<String> cmbBoxTeachers;
+    private javax.swing.JTextField inputStudentID;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblViewTeacher;
+    private javax.swing.JLabel lblWelcome;
+    private javax.swing.JLabel lblviewStudent;
     // End of variables declaration//GEN-END:variables
 }

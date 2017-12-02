@@ -29,80 +29,80 @@ public class ChangeRequest extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        lblChangeRequest = new javax.swing.JLabel();
+        lblStudentID = new javax.swing.JLabel();
+        lblPersonRequesting = new javax.swing.JLabel();
+        lblSelectField = new javax.swing.JLabel();
+        radioName = new javax.swing.JRadioButton();
+        radioTeacher = new javax.swing.JRadioButton();
+        radioAllergies = new javax.swing.JRadioButton();
+        radioMedications = new javax.swing.JRadioButton();
+        radioAbsences = new javax.swing.JRadioButton();
+        radioGrades = new javax.swing.JRadioButton();
+        radioSchedule = new javax.swing.JRadioButton();
+        inputPersonRequesting = new javax.swing.JTextField();
+        inputStudentID = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
+        lblExplainChange = new javax.swing.JLabel();
+        scrollPaneChangeToBeMade = new javax.swing.JScrollPane();
+        inputChangeToBeMade = new javax.swing.JTextArea();
+        btnSubmit = new javax.swing.JButton();
+        btnMainMenu = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
+        radioStudentID = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Change Request Form");
+        lblChangeRequest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblChangeRequest.setText("Change Request Form");
 
-        jLabel2.setText("Student ID:");
+        lblStudentID.setText("Student ID:");
 
-        jLabel3.setText("Name of person requesting change:");
+        lblPersonRequesting.setText("Name of person requesting change:");
 
-        jLabel4.setText("Select field(s) to edit:");
+        lblSelectField.setText("Select field(s) to edit:");
 
-        jRadioButton1.setText("Name");
+        radioName.setText("Name");
 
-        jRadioButton2.setText("Teacher");
+        radioTeacher.setText("Teacher");
 
-        jRadioButton3.setText("Allergies");
+        radioAllergies.setText("Allergies");
 
-        jRadioButton4.setText("Medications");
+        radioMedications.setText("Medications");
 
-        jRadioButton5.setText("Absences");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        radioAbsences.setText("Absences");
+        radioAbsences.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                radioAbsencesActionPerformed(evt);
             }
         });
 
-        jRadioButton6.setText("Grades");
+        radioGrades.setText("Grades");
 
-        jRadioButton7.setText("Schedule");
+        radioSchedule.setText("Schedule");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        inputStudentID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                inputStudentIDActionPerformed(evt);
             }
         });
 
-        jLabel6.setText("Please explain the change(s) that needs to be made:");
+        lblExplainChange.setText("Please explain the change(s) that needs to be made:");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        inputChangeToBeMade.setColumns(20);
+        inputChangeToBeMade.setRows(5);
+        scrollPaneChangeToBeMade.setViewportView(inputChangeToBeMade);
 
-        jButton1.setText("Submit");
+        btnSubmit.setText("Submit");
 
-        jButton2.setText("Main Menu");
+        btnMainMenu.setText("Main Menu");
 
-        jButton3.setText("Logout");
+        btnLogout.setText("Logout");
 
-        jRadioButton8.setText("Student ID");
-        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
+        radioStudentID.setText("Student ID");
+        radioStudentID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton8ActionPerformed(evt);
+                radioStudentIDActionPerformed(evt);
             }
         });
 
@@ -115,116 +115,116 @@ public class ChangeRequest extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
+                        .addComponent(lblPersonRequesting)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputPersonRequesting, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(210, 210, 210))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                        .addComponent(lblStudentID)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(280, 280, 280))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton6))
-                            .addComponent(jLabel4))
+                        .addComponent(lblSelectField)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton2)
+                                .addComponent(radioTeacher)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton5)
+                                .addComponent(radioAbsences)
                                 .addGap(29, 29, 29)
-                                .addComponent(jRadioButton3)
+                                .addComponent(radioAllergies)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton8))
+                                .addComponent(radioStudentID))
                             .addComponent(jLabel5)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(169, 169, 169)
-                                .addComponent(jLabel1))
+                                .addComponent(lblChangeRequest))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel6)
+                                    .addComponent(lblExplainChange)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(11, 11, 11)
-                                        .addComponent(jButton1)
+                                        .addComponent(btnSubmit)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton2)))
+                                        .addComponent(btnMainMenu)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
                                         .addGap(81, 81, 81)
-                                        .addComponent(jButton3)))))
+                                        .addComponent(btnLogout))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(scrollPaneChangeToBeMade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(radioName)
+                                .addGap(18, 18, 18)
+                                .addComponent(radioMedications)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(radioSchedule)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(radioGrades)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(jLabel1)
+                .addComponent(lblChangeRequest)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblPersonRequesting)
+                    .addComponent(inputPersonRequesting, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblStudentID)
+                    .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
+                .addComponent(lblSelectField)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton7)
-                    .addComponent(jRadioButton6))
+                    .addComponent(radioName)
+                    .addComponent(radioMedications)
+                    .addComponent(radioSchedule)
+                    .addComponent(radioGrades))
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton8))
+                    .addComponent(radioTeacher)
+                    .addComponent(radioAbsences)
+                    .addComponent(radioAllergies)
+                    .addComponent(radioStudentID))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6)
+                        .addComponent(lblExplainChange)
                         .addGap(54, 54, 54)
-                        .addComponent(jButton1)
+                        .addComponent(btnSubmit)
                         .addGap(11, 11, 11)
                         .addComponent(jLabel5))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(6, 6, 6)
+                        .addComponent(scrollPaneChangeToBeMade, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton3)
-                            .addComponent(jButton2))))
+                            .addComponent(btnLogout)
+                            .addComponent(btnMainMenu))))
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void radioAbsencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAbsencesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_radioAbsencesActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void inputStudentIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputStudentIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_inputStudentIDActionPerformed
 
-    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
+    private void radioStudentIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioStudentIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton8ActionPerformed
+    }//GEN-LAST:event_radioStudentIDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -263,27 +263,27 @@ public class ChangeRequest extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnMainMenu;
+    private javax.swing.JButton btnSubmit;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextArea inputChangeToBeMade;
+    private javax.swing.JTextField inputPersonRequesting;
+    private javax.swing.JTextField inputStudentID;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel lblChangeRequest;
+    private javax.swing.JLabel lblExplainChange;
+    private javax.swing.JLabel lblPersonRequesting;
+    private javax.swing.JLabel lblSelectField;
+    private javax.swing.JLabel lblStudentID;
+    private javax.swing.JRadioButton radioAbsences;
+    private javax.swing.JRadioButton radioAllergies;
+    private javax.swing.JRadioButton radioGrades;
+    private javax.swing.JRadioButton radioMedications;
+    private javax.swing.JRadioButton radioName;
+    private javax.swing.JRadioButton radioSchedule;
+    private javax.swing.JRadioButton radioStudentID;
+    private javax.swing.JRadioButton radioTeacher;
+    private javax.swing.JScrollPane scrollPaneChangeToBeMade;
     // End of variables declaration//GEN-END:variables
 }

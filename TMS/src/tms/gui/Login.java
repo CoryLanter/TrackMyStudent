@@ -30,10 +30,10 @@ public class Login extends javax.swing.JFrame
     private void initComponents() {
 
         btnFaculty = new javax.swing.JButton();
-        lblTitle = new javax.swing.JLabel();
+        lblWelcome = new javax.swing.JLabel();
         btnNonFaculty = new javax.swing.JButton();
         btnAdmin = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lblUserType = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,7 +44,7 @@ public class Login extends javax.swing.JFrame
             }
         });
 
-        lblTitle.setText("Welcome to TMS.");
+        lblWelcome.setText("Welcome to TMS.");
 
         btnNonFaculty.setText("Non-Faculty");
         btnNonFaculty.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +60,7 @@ public class Login extends javax.swing.JFrame
             }
         });
 
-        jLabel1.setText("Please select user type to begin.");
+        lblUserType.setText("Please select user type to begin.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,7 +70,7 @@ public class Login extends javax.swing.JFrame
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(148, 148, 148)
-                        .addComponent(lblTitle))
+                        .addComponent(lblWelcome))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,16 +79,16 @@ public class Login extends javax.swing.JFrame
                             .addComponent(btnAdmin)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(98, 98, 98)
-                        .addComponent(jLabel1)))
+                        .addComponent(lblUserType)))
                 .addContainerGap(112, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(lblTitle)
+                .addComponent(lblWelcome)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addComponent(lblUserType)
                 .addGap(24, 24, 24)
                 .addComponent(btnFaculty)
                 .addGap(28, 28, 28)
@@ -173,7 +173,7 @@ public class Login extends javax.swing.JFrame
     private javax.swing.JButton btnAdmin;
     private javax.swing.JButton btnFaculty;
     private javax.swing.JButton btnNonFaculty;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblUserType;
+    private javax.swing.JLabel lblWelcome;
     // End of variables declaration//GEN-END:variables
 }
