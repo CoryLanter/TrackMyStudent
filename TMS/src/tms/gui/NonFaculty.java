@@ -42,6 +42,11 @@ public class NonFaculty extends javax.swing.JFrame {
         btnSubmit.setText("Submit");
 
         btnChangeRequest.setText("Change Request");
+        btnChangeRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChangeRequestActionPerformed(evt);
+            }
+        });
 
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -103,6 +108,12 @@ public class NonFaculty extends javax.swing.JFrame {
 	this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnChangeRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeRequestActionPerformed
+        // TODO add your handling code here:
+	this.setVisible(false);
+        new ChangeRequest().setVisible(true);        
+    }//GEN-LAST:event_btnChangeRequestActionPerformed
 
     /**
      * @param args the command line arguments

@@ -66,10 +66,20 @@ public class EditStudent extends javax.swing.JFrame {
         lblTeacher.setText("Teacher:");
 
         btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
         btnLogout.setText("Logout");
 
         btnMainMenu.setText("Main Menu");
+        btnMainMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMainMenuActionPerformed(evt);
+            }
+        });
 
         lblSchedule.setText("Schedule:");
 
@@ -188,6 +198,31 @@ public class EditStudent extends javax.swing.JFrame {
     private void inputGradesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputGradesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_inputGradesActionPerformed
+
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        // TODO add your handling code here:
+        //Need code here to make the edit save to student.txt and go to log/backup log
+     //   this.setVisible(false);
+     //   new ().setVisible(true);
+    }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        switch(Login.getUserType())
+        {
+            case 0:
+                new Faculty().setVisible(true);
+                break;
+            case 1:
+                new NonFaculty().setVisible(true);
+                break;
+            case 2:
+                new Admin().setVisible(true);
+                break;
+                
+        }
+    }//GEN-LAST:event_btnMainMenuActionPerformed
 
     /**
      * @param args the command line arguments

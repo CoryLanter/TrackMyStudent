@@ -11,7 +11,13 @@ package tms.gui;
  */
 public class Login extends javax.swing.JFrame
 {
-
+    /*
+    faculty = 0
+    non-faculty = 1
+    admin = 2
+    */
+    public static int userType;
+    
     /**
      * Creates new form TMS_UI
      */
@@ -104,6 +110,7 @@ public class Login extends javax.swing.JFrame
     private void btnFacultyActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnFacultyActionPerformed
     {//GEN-HEADEREND:event_btnFacultyActionPerformed
         // TODO add your handling code here:
+        userType = 0;
 	this.setVisible(false);
         new Faculty().setVisible(true);
     }//GEN-LAST:event_btnFacultyActionPerformed
@@ -111,6 +118,7 @@ public class Login extends javax.swing.JFrame
     private void btnNonFacultyActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnNonFacultyActionPerformed
     {//GEN-HEADEREND:event_btnNonFacultyActionPerformed
         // TODO add your handling code here:
+        userType = 1;
 	this.setVisible(false);
         new NonFaculty().setVisible(true);
     }//GEN-LAST:event_btnNonFacultyActionPerformed
@@ -118,6 +126,7 @@ public class Login extends javax.swing.JFrame
     private void btnAdminActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnAdminActionPerformed
     {//GEN-HEADEREND:event_btnAdminActionPerformed
         // TODO add your handling code here:
+        userType = 2;
 	this.setVisible(false);
         new Admin().setVisible(true);
     }//GEN-LAST:event_btnAdminActionPerformed
@@ -169,6 +178,11 @@ public class Login extends javax.swing.JFrame
 	});
     }
 
+    public static int getUserType()
+    {
+        return userType;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdmin;
     private javax.swing.JButton btnFaculty;

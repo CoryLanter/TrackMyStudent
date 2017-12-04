@@ -43,10 +43,25 @@ public class changeVerified extends javax.swing.JFrame {
         inputConfirmation.setText("jLabel3");
 
         btnChangeRequest.setText("Change Request");
+        btnChangeRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChangeRequestActionPerformed(evt);
+            }
+        });
 
         btnMainMenu.setText("Main Menu");
+        btnMainMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMainMenuActionPerformed(evt);
+            }
+        });
 
         btnLogout.setText("Logout");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,6 +105,35 @@ public class changeVerified extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnChangeRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeRequestActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new ChangeRequest().setVisible(true);
+    }//GEN-LAST:event_btnChangeRequestActionPerformed
+
+    private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        switch(Login.getUserType())
+        {
+            case 0:
+                new Faculty().setVisible(true);
+                break;
+            case 1:
+                new NonFaculty().setVisible(true);
+                break;
+            case 2:
+                new Admin().setVisible(true);
+                break;
+        }
+    }//GEN-LAST:event_btnMainMenuActionPerformed
+
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Login().setVisible(true);
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**
      * @param args the command line arguments

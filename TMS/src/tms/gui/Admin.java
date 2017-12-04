@@ -52,6 +52,11 @@ public class Admin extends javax.swing.JFrame {
         cmbBoxTeachers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Johnson", "Smith", "Eddy", "Brown" }));
 
         btnViewChangeRequest.setText("View Change Requests");
+        btnViewChangeRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewChangeRequestActionPerformed(evt);
+            }
+        });
 
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -132,6 +137,12 @@ public class Admin extends javax.swing.JFrame {
 	this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnViewChangeRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewChangeRequestActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new ChangeRequest().setVisible(true);
+    }//GEN-LAST:event_btnViewChangeRequestActionPerformed
 
     /**
      * @param args the command line arguments
