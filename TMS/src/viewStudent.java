@@ -14,7 +14,15 @@ public class viewStudent extends javax.swing.JFrame {
     /**
      * Creates new form viewStudent
      */
+    private int studentId;
+    private Student stu = StudentFile.readStudentById(studentId);
+    
     public viewStudent() {
+        initComponents();
+    }
+    
+    public viewStudent(int id) {
+        studentId = id;
         initComponents();
     }
 
@@ -25,8 +33,7 @@ public class viewStudent extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         lblViewStudent = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
@@ -46,7 +53,7 @@ public class viewStudent extends javax.swing.JFrame {
 
         lblViewStudent.setText("Viewing Student");
 
-        lblName.setText("Name:  ");
+        lblName.setText("Name:  " + stu.getName());
 
         lblStudentID.setText("Student ID:  ");
 
@@ -63,28 +70,22 @@ public class viewStudent extends javax.swing.JFrame {
         lblSchedule.setText("Schedule:  ");
 
         btnChangeRequest.setText("Change Request");
-        btnChangeRequest.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnChangeRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnChangeRequestActionPerformed(evt);
             }
         });
 
         btnMainMenu.setText("Main Menu");
-        btnMainMenu.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnMainMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMainMenuActionPerformed(evt);
             }
         });
 
         btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
             }
         });
@@ -216,7 +217,7 @@ public class viewStudent extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(viewStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+            
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

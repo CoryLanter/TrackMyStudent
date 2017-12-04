@@ -26,8 +26,7 @@ public class Faculty extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         inputStudentId = new javax.swing.JTextField();
         cmbSelectTeacherName = new javax.swing.JComboBox<>();
@@ -41,10 +40,8 @@ public class Faculty extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        inputStudentId.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        inputStudentId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputStudentIdActionPerformed(evt);
             }
         });
@@ -57,24 +54,25 @@ public class Faculty extends javax.swing.JFrame {
         lblSelectTeacherName.setText("To view a class list select Teacher Name:");
 
         btnChangeRequest.setText("Change Request");
-        btnChangeRequest.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnChangeRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnChangeRequestActionPerformed(evt);
             }
         });
 
         btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
             }
         });
 
         btnSubmitStudentId.setText("Submit");
+        btnSubmitStudentId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitStudentIdActionPerformed(evt);
+            }
+        });
 
         btnSubmitTeacherName.setText("Submit");
 
@@ -161,6 +159,13 @@ public class Faculty extends javax.swing.JFrame {
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnSubmitStudentIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitStudentIdActionPerformed
+        // TODO add your handling code here:
+        int studentId = Integer.parseInt(inputStudentId.getText());
+        this.setVisible(false);
+        new viewStudent().setVisible(true);
+    }//GEN-LAST:event_btnSubmitStudentIdActionPerformed
 
     /**
      * @param args the command line arguments

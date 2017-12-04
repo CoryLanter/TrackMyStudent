@@ -19,7 +19,7 @@ import java.util.ArrayList;
  */
 public class StudentFile
 {
-    private static void writeStudents(Student[] students)
+    public static void writeStudents(Student[] students)
     {
 	ObjectOutputStream out;
 	
@@ -39,7 +39,7 @@ public class StudentFile
 	}
     }
     
-    private static Student readStudentById(int studentId)
+    public static Student readStudentById(int studentId)
     {
 	ObjectInputStream in;
 	Student stu;
@@ -64,7 +64,7 @@ public class StudentFile
 	}
     }
     
-    private static ArrayList<Student> readStudentsByTeacher(String teacher)
+    public static ArrayList<Student> readStudentsByTeacher(String teacher)
     {
 	ArrayList<Student> students = new ArrayList<Student>();
 	ObjectInputStream in;
