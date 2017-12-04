@@ -6,7 +6,6 @@ package tms.objects;
  * and open the template in the editor.
  */
 
-
 import java.io.Serializable;
 
 /**
@@ -24,7 +23,7 @@ public class Student implements Serializable
     private char avgGrade; // average letter grade from major subjects
     private char block; // student's lunch block
 
-    public Student(String name, int studentId, String teacher, String[] allergies, String[] medications, String address, char[] grades, char block)
+    public Student(String name, int studentId, String teacher, String allergies, String medications, String address, char avgGrade, char block)
     {
 	this.name = name;
 	this.studentId = studentId;
@@ -32,7 +31,7 @@ public class Student implements Serializable
 	this.allergies = allergies;
 	this.medications = medications;
 	this.address = address;
-	this.avgGrade = grades;
+	this.avgGrade = avgGrade;
 	this.block = block;
     }
     
@@ -66,22 +65,22 @@ public class Student implements Serializable
 	this.teacher = teacher;
     }
 
-    public String[] getAllergies()
+    public String getAllergies()
     {
 	return allergies;
     }
 
-    public void setAllergies(String[] allergies)
+    public void setAllergies(String allergies)
     {
 	this.allergies = allergies;
     }
 
-    public String[] getMedications()
+    public String getMedications()
     {
 	return medications;
     }
 
-    public void setMedications(String[] medications)
+    public void setMedications(String medications)
     {
 	this.medications = medications;
     }
@@ -96,14 +95,14 @@ public class Student implements Serializable
 	this.address = address;
     }
 
-    public char[] getGrades()
+    public char getAvgGrade()
     {
 	return avgGrade;
     }
 
-    public void setGrades(char[] grades)
+    public void setAvgGrade(char avgGrade)
     {
-	this.avgGrade = grades;
+	this.avgGrade = avgGrade;
     }
 
     public char getBlock()
@@ -127,5 +126,4 @@ public class Student implements Serializable
     {
 	return this.teacher.equals(teacher);
     }
-    
 }
