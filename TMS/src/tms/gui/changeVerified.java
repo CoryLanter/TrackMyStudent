@@ -29,7 +29,6 @@ public class changeVerified extends javax.swing.JFrame {
 
         lblReqSent = new javax.swing.JLabel();
         lblConfirmation = new javax.swing.JLabel();
-        inputConfirmation = new javax.swing.JLabel();
         btnChangeRequest = new javax.swing.JButton();
         btnMainMenu = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
@@ -39,8 +38,6 @@ public class changeVerified extends javax.swing.JFrame {
         lblReqSent.setText("Change Request sent!");
 
         lblConfirmation.setText("Your confirmation number is:");
-
-        inputConfirmation.setText("jLabel3");
 
         btnChangeRequest.setText("Change Request");
         btnChangeRequest.addActionListener(new java.awt.event.ActionListener() {
@@ -81,9 +78,7 @@ public class changeVerified extends javax.swing.JFrame {
                         .addGap(46, 46, 46)
                         .addComponent(lblConfirmation)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(inputConfirmation)
-                    .addComponent(btnLogout))
+                .addComponent(btnLogout)
                 .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
@@ -92,9 +87,7 @@ public class changeVerified extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(lblReqSent)
                 .addGap(70, 70, 70)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConfirmation)
-                    .addComponent(inputConfirmation))
+                .addComponent(lblConfirmation)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnChangeRequest)
@@ -174,7 +167,6 @@ public class changeVerified extends javax.swing.JFrame {
     private javax.swing.JButton btnChangeRequest;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMainMenu;
-    private javax.swing.JLabel inputConfirmation;
     private javax.swing.JLabel lblConfirmation;
     private javax.swing.JLabel lblReqSent;
     // End of variables declaration//GEN-END:variables

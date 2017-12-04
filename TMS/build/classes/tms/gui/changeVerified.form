@@ -41,10 +41,7 @@
                   </Group>
               </Group>
               <EmptySpace pref="28" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="inputConfirmation" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnLogout" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="btnLogout" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -55,10 +52,7 @@
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Component id="lblReqSent" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblConfirmation" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="inputConfirmation" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="lblConfirmation" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="114" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnChangeRequest" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -79,11 +73,6 @@
     <Component class="javax.swing.JLabel" name="lblConfirmation">
       <Properties>
         <Property name="text" type="java.lang.String" value="Your confirmation number is:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="inputConfirmation">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel3"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnChangeRequest">
