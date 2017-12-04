@@ -145,8 +145,8 @@ public class Admin extends javax.swing.JFrame {
 
     private void btnViewChangeRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewChangeRequestActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        new ChangeRequest().setVisible(true);
+        this.setVisible(true);
+        new pendingChangeRequest().setVisible(true);
     }//GEN-LAST:event_btnViewChangeRequestActionPerformed
 
     /**
