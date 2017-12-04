@@ -1,3 +1,5 @@
+package tms.objects;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,14 +15,14 @@ import java.io.Serializable;
  */
 public class Student implements Serializable
 {
-    private String name;
-    private int studentId;
-    private String teacher;
-    private String allergies;
-    private String medications;
-    private String address;
-    private char avgGrade;
-    private char block;
+    private String name; // student's name
+    private int studentId; // 5 digit id to identify student
+    private String teacher; // the students teacher
+    private String allergies; // list of student's allergies seperated by commas
+    private String medications; // list of student's medications seperated by commas
+    private String address; // student's address
+    private char avgGrade; // average letter grade from major subjects
+    private char block; // student's lunch block
 
     public Student(String name, int studentId, String teacher, String[] allergies, String[] medications, String address, char[] grades, char block)
     {
@@ -114,11 +116,13 @@ public class Student implements Serializable
 	this.block = block;
     }
     
+    // returns true if student matches entered id
     public boolean compareStudentId(int studentId)
     {
 	return this.getStudentId() == studentId;
     }
     
+    // returns true if student is taught by entered teacher
     public boolean compareTeacher(String teacher)
     {
 	return this.teacher.equals(teacher);
