@@ -7,18 +7,20 @@
 
 import java.io.Serializable;
 import java.util.Date;
+
 /**
  *
  * @author Cory Lanter
  */
 public class Change implements Serializable
 {
-
 private String name; //Person's name of who is requesting the change
 private int studentID; //Student ID to be changed
 private String fieldToEdit; //String to be built to interact with the radio buttons in ChangeRequest
 private String txtBlock; //Text block to be written in
 private Date reqDate; //Date of which the request is submitted
+//private int confId; //
+//private static int counterID;
     
     public Change(String name, int studentID, String fieldToEdit, String txtBlock, Date reqDate){
         this.name = name;

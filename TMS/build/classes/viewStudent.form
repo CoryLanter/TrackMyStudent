@@ -111,42 +111,58 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblName">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Name:  "/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Name:  &quot; + stu.getName()" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblStudentID">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Student ID:  "/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Student ID:  &quot; + stu.getStudentId()" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblTeacher">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Teacher:  "/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Teacher:  &quot; + stu.getTeacher()" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblAllergies">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Allergies:  "/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Allergies:  &quot; + stu.getAllergies()" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblMedications">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Medications: "/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Medications: &quot; + stu.getMedications()" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblAbsences">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Absences: "/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Absences: &quot; + stu.getAbsences()" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblGrades">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Grades:  "/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Grades:  &quot; + stu.getAvgGrade()" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblSchedule">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Schedule:  "/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Schedule:  &quot; + stu.getBlock()" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">

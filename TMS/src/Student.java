@@ -30,8 +30,9 @@ public class Student implements Serializable
     private String address; // student's address
     private char avgGrade; // average letter grade from major subjects
     private char block; // student's lunch block
+    private int absences; //Number of student's absences per school year
 
-    public Student(String name, int studentId, String teacher, String allergies, String medications, String address, char avgGrades, char block)
+    public Student(String name, int studentId, String teacher, String allergies, String medications, String address, char avgGrades, char block, int absences)
     {
 	this.name = name;
 	this.studentId = studentId;
@@ -41,6 +42,7 @@ public class Student implements Serializable
 	this.address = address;
 	this.avgGrade = avgGrades;
 	this.block = block;
+        this.absences = absences;
     }
     
     public String getName()
@@ -103,7 +105,7 @@ public class Student implements Serializable
 	this.address = address;
     }
 
-    public char getavgGrade()
+    public char getAvgGrade()
     {
 	return avgGrade;
     }
@@ -134,4 +136,13 @@ public class Student implements Serializable
     {
 	return this.teacher.equals(teacher);
     }
+
+    public int getAbsences() {
+        return absences;
+    }
+
+    public void setAbsences(int absences) {
+        this.absences = absences;
+    }
+    
 }

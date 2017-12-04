@@ -56,19 +56,19 @@ public class viewStudent extends javax.swing.JFrame {
 
         lblName.setText("Name:  " + stu.getName());
 
-        lblStudentID.setText("Student ID:  ");
+        lblStudentID.setText("Student ID:  " + stu.getStudentId());
 
-        lblTeacher.setText("Teacher:  ");
+        lblTeacher.setText("Teacher:  " + stu.getTeacher());
 
-        lblAllergies.setText("Allergies:  ");
+        lblAllergies.setText("Allergies:  " + stu.getAllergies());
 
-        lblMedications.setText("Medications: ");
+        lblMedications.setText("Medications: " + stu.getMedications());
 
-        lblAbsences.setText("Absences: ");
+        lblAbsences.setText("Absences: " + stu.getAbsences());
 
-        lblGrades.setText("Grades:  ");
+        lblGrades.setText("Grades:  " + stu.getAvgGrade());
 
-        lblSchedule.setText("Schedule:  ");
+        lblSchedule.setText("Schedule:  " + stu.getBlock());
 
         btnChangeRequest.setText("Change Request");
         btnChangeRequest.addActionListener(new java.awt.event.ActionListener() {
