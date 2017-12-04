@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package objects;
+package tms.objects;
 
 import java.io.Serializable;
 import java.util.Date;
