@@ -6,7 +6,15 @@ package tms.objects;
  * and open the template in the editor.
  */
 
+
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -23,7 +31,7 @@ public class Student implements Serializable
     private char avgGrade; // average letter grade from major subjects
     private char block; // student's lunch block
 
-    public Student(String name, int studentId, String teacher, String allergies, String medications, String address, char avgGrade, char block)
+    public Student(String name, int studentId, String teacher, String allergies, String medications, String address, char avgGrades, char block)
     {
 	this.name = name;
 	this.studentId = studentId;
@@ -31,7 +39,7 @@ public class Student implements Serializable
 	this.allergies = allergies;
 	this.medications = medications;
 	this.address = address;
-	this.avgGrade = avgGrade;
+	this.avgGrade = avgGrades;
 	this.block = block;
     }
     
@@ -95,7 +103,7 @@ public class Student implements Serializable
 	this.address = address;
     }
 
-    public char getAvgGrade()
+    public char getavgGrade()
     {
 	return avgGrade;
     }
