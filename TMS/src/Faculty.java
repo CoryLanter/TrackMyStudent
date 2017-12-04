@@ -1,4 +1,7 @@
 
+import java.util.InputMismatchException;
+
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -26,7 +29,8 @@ public class Faculty extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         inputStudentId = new javax.swing.JTextField();
         cmbSelectTeacherName = new javax.swing.JComboBox<>();
@@ -40,13 +44,22 @@ public class Faculty extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        inputStudentId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        inputStudentId.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 inputStudentIdActionPerformed(evt);
             }
         });
 
-        cmbSelectTeacherName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Johnson", "Smith", "Eddy", "Jones" }));
+        cmbSelectTeacherName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Beddy", "Walker" }));
+        cmbSelectTeacherName.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                cmbSelectTeacherNameActionPerformed(evt);
+            }
+        });
 
         lblEnterStudId.setName(""); // NOI18N
         lblEnterStudId.setText("To view a student, enter student ID: ");
@@ -54,27 +67,40 @@ public class Faculty extends javax.swing.JFrame {
         lblSelectTeacherName.setText("To view a class list select Teacher Name:");
 
         btnChangeRequest.setText("Change Request");
-        btnChangeRequest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnChangeRequest.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnChangeRequestActionPerformed(evt);
             }
         });
 
         btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnLogout.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnLogoutActionPerformed(evt);
             }
         });
 
         btnSubmitStudentId.setText("Submit");
-        btnSubmitStudentId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSubmitStudentId.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnSubmitStudentIdActionPerformed(evt);
             }
         });
 
         btnSubmitTeacherName.setText("Submit");
+        btnSubmitTeacherName.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnSubmitTeacherNameActionPerformed(evt);
+            }
+        });
 
         lblTitle.setText("Welcome Faculty");
 
@@ -89,7 +115,7 @@ public class Faculty extends javax.swing.JFrame {
                         .addComponent(lblEnterStudId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnSubmitStudentId)
                                 .addGap(10, 10, 10))
                             .addGroup(layout.createSequentialGroup()
@@ -162,10 +188,35 @@ public class Faculty extends javax.swing.JFrame {
 
     private void btnSubmitStudentIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitStudentIdActionPerformed
         // TODO add your handling code here:
-        int studentId = Integer.parseInt(inputStudentId.getText());
-        this.setVisible(false);
-        new viewStudent().setVisible(true);
+        int studentId;
+	
+	try
+	{
+	    studentId = Integer.parseInt(inputStudentId.getText());
+	    this.setVisible(false);
+	    new viewStudent(studentId).setVisible(true);
+	}
+	catch(InputMismatchException e)
+	{
+	    System.out.println(e.getMessage());
+	}
     }//GEN-LAST:event_btnSubmitStudentIdActionPerformed
+
+    private void cmbSelectTeacherNameActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbSelectTeacherNameActionPerformed
+    {//GEN-HEADEREND:event_cmbSelectTeacherNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbSelectTeacherNameActionPerformed
+
+    private void btnSubmitTeacherNameActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSubmitTeacherNameActionPerformed
+    {//GEN-HEADEREND:event_btnSubmitTeacherNameActionPerformed
+        // TODO add your handling code here:
+	if(cmbSelectTeacherName.getSelectedIndex() != -1)
+	{
+	    String teacher = cmbSelectTeacherName.getItemAt(cmbSelectTeacherName.getSelectedIndex());
+	    this.setVisible(false);
+	    new viewClass(teacher).setVisible(true);
+	}
+    }//GEN-LAST:event_btnSubmitTeacherNameActionPerformed
 
     /**
      * @param args the command line arguments
