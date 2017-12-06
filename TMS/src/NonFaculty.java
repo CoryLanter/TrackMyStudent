@@ -1,4 +1,7 @@
 
+import java.util.InputMismatchException;
+
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -30,7 +33,7 @@ public class NonFaculty extends javax.swing.JFrame {
     {
 
         lblViewStudent = new javax.swing.JLabel();
-        inputStudentID = new javax.swing.JTextField();
+        inputStudentId = new javax.swing.JTextField();
         btnSubmit = new javax.swing.JButton();
         btnChangeRequest = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
@@ -41,6 +44,13 @@ public class NonFaculty extends javax.swing.JFrame {
         lblViewStudent.setText("To view a Student, enter Student ID:");
 
         btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
         btnChangeRequest.setText("Change Request");
         btnChangeRequest.addActionListener(new java.awt.event.ActionListener()
@@ -75,13 +85,13 @@ public class NonFaculty extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(btnChangeRequest)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnLogout))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(lblViewStudent)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(inputStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnSubmit)))
@@ -95,7 +105,7 @@ public class NonFaculty extends javax.swing.JFrame {
                 .addGap(62, 62, 62)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblViewStudent)
-                    .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addComponent(btnSubmit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
@@ -119,6 +129,23 @@ public class NonFaculty extends javax.swing.JFrame {
 	this.setVisible(false);
         new ChangeRequest().setVisible(true);        
     }//GEN-LAST:event_btnChangeRequestActionPerformed
+
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSubmitActionPerformed
+    {//GEN-HEADEREND:event_btnSubmitActionPerformed
+        // TODO add your handling code here:
+	int studentId;
+	
+	try
+	{
+	    studentId = Integer.parseInt(inputStudentId.getText());
+	    this.setVisible(false);
+	    new viewStudent(studentId).setVisible(true);
+	}
+	catch(InputMismatchException e)
+	{
+	    System.out.println(e.getMessage());
+	}
+    }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,7 +189,7 @@ public class NonFaculty extends javax.swing.JFrame {
     private javax.swing.JButton btnChangeRequest;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnSubmit;
-    private javax.swing.JTextField inputStudentID;
+    private javax.swing.JTextField inputStudentId;
     private javax.swing.JLabel lblViewStudent;
     private javax.swing.JLabel lblWelcom;
     // End of variables declaration//GEN-END:variables

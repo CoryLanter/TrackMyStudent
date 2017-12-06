@@ -33,14 +33,14 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="btnChangeRequest" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="89" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="btnLogout" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Component id="lblViewStudent" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="inputStudentID" min="-2" pref="92" max="-2" attributes="0"/>
+                      <Component id="inputStudentId" min="-2" pref="92" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -59,7 +59,7 @@
               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblViewStudent" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="inputStudentID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="inputStudentId" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
@@ -79,12 +79,15 @@
         <Property name="text" type="java.lang.String" value="To view a Student, enter Student ID:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="inputStudentID">
+    <Component class="javax.swing.JTextField" name="inputStudentId">
     </Component>
     <Component class="javax.swing.JButton" name="btnSubmit">
       <Properties>
         <Property name="text" type="java.lang.String" value="Submit"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnChangeRequest">
       <Properties>
