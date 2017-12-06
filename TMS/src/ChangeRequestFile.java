@@ -19,13 +19,14 @@ import java.util.ArrayList;
  */
 public class ChangeRequestFile
 {
-    public static void writeChangeRequest(Change newChange)
+    // adds a change request to a given file
+    public static void writeChangeRequest(Change newChange, String fileName)
     {
 	ObjectOutputStream out;
 	
 	try
 	{
-	    out = new ObjectOutputStream(new FileOutputStream("pendingChangeRequests.dat"));
+	    out = new ObjectOutputStream(new FileOutputStream(fileName));
 	    
 	    out.writeObject(newChange);
 	    
@@ -37,7 +38,8 @@ public class ChangeRequestFile
 	}
     }
     
-    public static ArrayList<Change> readChangeRequests()
+    // reads in all change requests from a given file
+    public static ArrayList<Change> readChangeRequests(String fileName)
     {
 	ArrayList<Change> changes = new ArrayList<Change>();
 	ObjectInputStream in;
@@ -45,7 +47,7 @@ public class ChangeRequestFile
 	
 	try
 	{
-	    in = new ObjectInputStream(new FileInputStream("pendingChangeRequests.dat"));
+	    in = new ObjectInputStream(new FileInputStream(fileName));
 	    while(true)
 	    {
 		change = (Change) in.readObject();
@@ -60,6 +62,5 @@ public class ChangeRequestFile
 	    System.out.println(e.getMessage());
 	    return null;
 	}
-    }
-	    
+    }   
 }
