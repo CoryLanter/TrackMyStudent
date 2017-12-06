@@ -85,7 +85,7 @@ public class Login extends javax.swing.JFrame
                         .addGap(148, 148, 148)
                         .addComponent(lblWelcome))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
+                        .addGap(148, 148, 148)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnNonFaculty)
                             .addComponent(btnFaculty)
@@ -106,9 +106,9 @@ public class Login extends javax.swing.JFrame
                 .addComponent(btnFaculty)
                 .addGap(28, 28, 28)
                 .addComponent(btnNonFaculty)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(btnAdmin)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         pack();

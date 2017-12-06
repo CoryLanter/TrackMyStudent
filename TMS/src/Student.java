@@ -125,6 +125,16 @@ public class Student implements Serializable
 	this.block = block;
     }
     
+    public int getAbsences()
+    {
+        return absences;
+    }
+
+    public void setAbsences(int absences)
+    {
+        this.absences = absences;
+    }
+    
     // returns true if student matches entered id
     public boolean compareStudentId(int studentId)
     {
@@ -136,13 +146,9 @@ public class Student implements Serializable
     {
 	return this.teacher.equals(teacher);
     }
-
-    public int getAbsences() {
-        return absences;
-    }
-
-    public void setAbsences(int absences) {
-        this.absences = absences;
-    }
     
+    public String toString()
+    {
+	return "Name: " + this.getName() + ". Student Id: " + this.getStudentId() + ". Grade: " + this.getAvgGrade() + ".";
+    }
 }

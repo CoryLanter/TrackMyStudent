@@ -1,4 +1,7 @@
 
+import java.util.InputMismatchException;
+
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -26,11 +29,12 @@ public class Admin extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         lblWelcome = new javax.swing.JLabel();
         lblviewStudent = new javax.swing.JLabel();
-        inputStudentID = new javax.swing.JTextField();
+        inputStudentId = new javax.swing.JTextField();
         btnSubmitViewStudent = new javax.swing.JButton();
         lblViewTeacher = new javax.swing.JLabel();
         cmbBoxTeachers = new javax.swing.JComboBox<>();
@@ -50,21 +54,32 @@ public class Admin extends javax.swing.JFrame {
         lblviewStudent.setText("To view a Student, enter Student ID:");
 
         btnSubmitViewStudent.setText("Submit");
+        btnSubmitViewStudent.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnSubmitViewStudentActionPerformed(evt);
+            }
+        });
 
         lblViewTeacher.setText("To view a classlist, select Teacher's name:");
 
         cmbBoxTeachers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Johnson", "Smith", "Eddy", "Brown" }));
 
         btnViewChangeRequest.setText("View Change Requests");
-        btnViewChangeRequest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnViewChangeRequest.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnViewChangeRequestActionPerformed(evt);
             }
         });
 
         btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnLogout.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnLogoutActionPerformed(evt);
             }
         });
@@ -114,7 +129,7 @@ public class Admin extends javax.swing.JFrame {
                         .addGap(14, 14, 14)
                         .addComponent(lblviewStudent)
                         .addGap(27, 27, 27)
-                        .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(inputStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,7 +149,7 @@ public class Admin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblviewStudent)
-                    .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSubmitViewStudent)
                 .addGap(3, 3, 3)
@@ -177,6 +192,23 @@ public class Admin extends javax.swing.JFrame {
         this.setVisible(true);
         new pendingChangeRequest().setVisible(true);
     }//GEN-LAST:event_btnViewChangeRequestActionPerformed
+
+    private void btnSubmitViewStudentActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSubmitViewStudentActionPerformed
+    {//GEN-HEADEREND:event_btnSubmitViewStudentActionPerformed
+        // TODO add your handling code here:
+	int studentId;
+	
+	try
+	{
+	    studentId = Integer.parseInt(inputStudentId.getText());
+	    this.setVisible(false);
+	    new viewStudent(studentId).setVisible(true);
+	}
+	catch(InputMismatchException e)
+	{
+	    System.out.println(e.getMessage());
+	}
+    }//GEN-LAST:event_btnSubmitViewStudentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -222,7 +254,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton btnViewChangeRequest;
     private javax.swing.JComboBox<String> cmbBoxTeachers;
     private javax.swing.JTextField inputEditStudent;
-    private javax.swing.JTextField inputStudentID;
+    private javax.swing.JTextField inputStudentId;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblEditStudent;

@@ -14,16 +14,14 @@ public class viewStudent extends javax.swing.JFrame {
     /**
      * Creates new form viewStudent
      */
-    private int studentId;
     private Student stu;
     
     public viewStudent() {
         initComponents();
     }
     
-    public viewStudent(int id) {
-        studentId = id;
-	stu = StudentFile.readStudentById(studentId);
+    public viewStudent(int studentId) {
+        stu = StudentFile.readStudentById(studentId);
         initComponents();
     }
 
