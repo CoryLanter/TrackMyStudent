@@ -65,7 +65,7 @@
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Component id="lblviewStudent" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="inputStudentID" min="-2" pref="91" max="-2" attributes="0"/>
+                      <Component id="inputStudentId" min="-2" pref="91" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -92,7 +92,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblviewStudent" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="inputStudentID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="inputStudentId" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="btnSubmitViewStudent" min="-2" max="-2" attributes="0"/>
@@ -139,12 +139,15 @@
         <Property name="text" type="java.lang.String" value="To view a Student, enter Student ID:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="inputStudentID">
+    <Component class="javax.swing.JTextField" name="inputStudentId">
     </Component>
     <Component class="javax.swing.JButton" name="btnSubmitViewStudent">
       <Properties>
         <Property name="text" type="java.lang.String" value="Submit"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitViewStudentActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblViewTeacher">
       <Properties>
