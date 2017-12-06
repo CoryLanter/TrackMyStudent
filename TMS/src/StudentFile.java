@@ -19,6 +19,7 @@ import java.util.ArrayList;
  */
 public class StudentFile
 {
+    // writes an array of students to a binary file to initialize database
     public static void writeStudents(Student[] students)
     {
 	ObjectOutputStream out;
@@ -39,6 +40,25 @@ public class StudentFile
 	}
     }
     
+    // adds a single student to the binary file
+    public static void addStudent(Student student)
+    {
+	ObjectOutputStream out;
+	
+	try
+	{
+	    out = new ObjectOutputStream(new FileOutputStream("students.dat"));
+	    
+	    out.writeObject(student);
+	    out.close();
+	}
+	catch(IOException e)
+	{
+	    System.out.println(e.getMessage());
+	}
+    }
+    
+    // scans the binary file for a student with a matching Id and returns it
     public static Student readStudentById(int studentId)
     {
 	ObjectInputStream in;
@@ -64,6 +84,10 @@ public class StudentFile
 	}
     }
     
+    /*
+    scans the binary file for students with a given teacher and returns a list
+    of them
+    */
     public static ArrayList<Student> readStudentsByTeacher(String teacher)
     {
 	ArrayList<Student> students = new ArrayList<Student>();
