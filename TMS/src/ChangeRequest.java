@@ -293,6 +293,8 @@ public class ChangeRequest extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        new changeVerified().setVisible(true);
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**
