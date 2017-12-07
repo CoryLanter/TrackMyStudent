@@ -10,5 +10,8 @@
  */
 public class ButtonFunctions
 {
-    // public static 
+    public static void viewStudentButton()
+    {
+	
+    }
 }

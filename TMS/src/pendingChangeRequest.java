@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,21 +11,15 @@
  *
  * @author Cory Lanter's Laptop
  */
-public class pendingChangeRequest extends javax.swing.JFrame {
-
+public class pendingChangeRequest extends javax.swing.JFrame
+{
+    private ArrayList<Change> changes;
     
-        private Change cng;
-    
-    public pendingChangeRequest() {
-        initComponents();
-    }
-   /* 
-   
-    public pendingChangeRequest(String toString) {
-        cng = ChangeRequestFile.readChangeRequests(ArrayList<Change>);
-        initComponents();
-    }
-*/
+    public pendingChangeRequest()
+    {
+        changes = ChangeRequestFile.readChangeRequests("pendingChangeRequests.dat");
+	initComponents();
+    } 
 
     /**
      * This method is called from within the constructor to initialize the form.
