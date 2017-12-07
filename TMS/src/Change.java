@@ -70,5 +70,11 @@ private Date reqDate; //Date of which the request is submitted
         this.reqDate = reqDate;
     }
 
-    
+     public String toString()
+    {
+	return "From: " + this.getName() + ". Student Id: " + this.getStudentID() + ". Comment: " + this.getTxtBlock() + "." + " Date of Submission: " + this.getReqDate() + ".";
+    }
 }
+
+    
+
