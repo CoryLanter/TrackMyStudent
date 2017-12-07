@@ -28,7 +28,7 @@ public class Change implements Serializable
         this.fieldToEdit = fieldToEdit;
         this.txtBlock = txtBlock;
         this.reqDate = reqDate;
-	this.changeId = idCounter;
+	this.changeId = idCounter++;
     }
 
     public String getName()
