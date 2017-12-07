@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class ChangeRequestFile
 {
     // adds a change request to a given file
-    public static void writeChangeRequest(Change newChange, String fileName)
+    public static void addChangeRequest(Change newChange, String fileName)
     {
 	ObjectOutputStream out;
 	
