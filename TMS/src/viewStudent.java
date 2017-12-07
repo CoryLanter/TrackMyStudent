@@ -20,8 +20,8 @@ public class viewStudent extends javax.swing.JFrame {
         initComponents();
     }
     
-    public viewStudent(int studentId) {
-        stu = StudentFile.readStudentById(studentId);
+    public viewStudent(Student student) {
+        stu = student;
         initComponents();
     }
 
