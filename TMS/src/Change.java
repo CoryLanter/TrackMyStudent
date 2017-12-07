@@ -13,21 +13,23 @@ import java.util.Date;
  */
 public class Change implements Serializable
 {
-    private String name; //Person's name of who is requesting the change
-    private int studentID; //Student ID to be changed
-    private String fieldToEdit; //String to be built to interact with the radio buttons in ChangeRequest
-    private String txtBlock; //Text block to be written in
-    private Date reqDate; //Date of which the request is submitted
+    private String name; // Person's name of who is requesting the change
+    private int studentID; // Student ID to be changed
+    private String fieldToEdit; // String to be built to interact with the radio buttons in ChangeRequest
+    private String txtBlock; // Text block to be written in
+    private Date reqDate; // Date of which the request is submitted
+    private Date resolveDate; // Date of which the request is resolved
     private int changeId; // identifies the change request (6 digit)
     private static int idCounter = 100000; // used to generate changeId
     
-    public Change(String name, int studentID, String fieldToEdit, String txtBlock, Date reqDate)
+    public Change(String name, int studentID, String fieldToEdit, String txtBlock, Date reqDate, Date resolveDate)
     {
         this.name = name;
         this.studentID = studentID;
         this.fieldToEdit = fieldToEdit;
         this.txtBlock = txtBlock;
         this.reqDate = reqDate;
+        this.resolveDate = resolveDate;
 	this.changeId = idCounter++;
     }
 
@@ -80,6 +82,14 @@ public class Change implements Serializable
         this.reqDate = reqDate;
     }
 
+    public Date getResolveDate() {
+        return resolveDate;
+    }
+
+    public void setResolveDate(Date resolveDate) {
+        this.resolveDate = resolveDate;
+    }
+
     public int getChangeId()
     {
 	return changeId;
@@ -94,6 +104,7 @@ public class Change implements Serializable
     {
 	return idCounter;
     }
+    
     
     public String toString()
     {

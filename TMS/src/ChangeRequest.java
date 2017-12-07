@@ -1,4 +1,5 @@
 
+import java.util.Date;
 import java.util.InputMismatchException;
 
 
@@ -29,21 +30,13 @@ public class ChangeRequest extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         lblChangeRequest = new javax.swing.JLabel();
         lblStudentID = new javax.swing.JLabel();
         lblPersonRequesting = new javax.swing.JLabel();
         lblSelectField = new javax.swing.JLabel();
-        radioName = new javax.swing.JRadioButton();
-        radioTeacher = new javax.swing.JRadioButton();
-        radioAllergies = new javax.swing.JRadioButton();
-        radioMedications = new javax.swing.JRadioButton();
-        radioAbsences = new javax.swing.JRadioButton();
-        radioGrades = new javax.swing.JRadioButton();
-        radioSchedule = new javax.swing.JRadioButton();
         inputPersonRequesting = new javax.swing.JTextField();
         inputStudentID = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -53,9 +46,7 @@ public class ChangeRequest extends javax.swing.JFrame {
         btnSubmit = new javax.swing.JButton();
         btnMainMenu = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
-        radioStudentID = new javax.swing.JRadioButton();
-        radioAddStudent = new javax.swing.JRadioButton();
-        btnDeleteStudent = new javax.swing.JRadioButton();
+        cmbFieldToEdit = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,31 +59,8 @@ public class ChangeRequest extends javax.swing.JFrame {
 
         lblSelectField.setText("Select field(s) to edit:");
 
-        radioName.setText("Name");
-
-        radioTeacher.setText("Teacher");
-
-        radioAllergies.setText("Allergies");
-
-        radioMedications.setText("Medications");
-
-        radioAbsences.setText("Absences");
-        radioAbsences.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                radioAbsencesActionPerformed(evt);
-            }
-        });
-
-        radioGrades.setText("Grades");
-
-        radioSchedule.setText("Schedule");
-
-        inputStudentID.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        inputStudentID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputStudentIDActionPerformed(evt);
             }
         });
@@ -104,117 +72,81 @@ public class ChangeRequest extends javax.swing.JFrame {
         scrollPaneChangeToBeMade.setViewportView(inputChangeToBeMade);
 
         btnSubmit.setText("Submit");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
             }
         });
 
         btnMainMenu.setText("Main Menu");
-        btnMainMenu.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnMainMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMainMenuActionPerformed(evt);
             }
         });
 
         btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
             }
         });
 
-        radioStudentID.setText("Student ID");
-        radioStudentID.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                radioStudentIDActionPerformed(evt);
+        cmbFieldToEdit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Name", "Medication", "Schedule", "Grades", "Teacher", "Absences", "Allergies", "Student ID", "Delete a student", "Add a student" }));
+        cmbFieldToEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbFieldToEditActionPerformed(evt);
             }
         });
-
-        radioAddStudent.setText("Add a student");
-
-        btnDeleteStudent.setText("Delete a student");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lblPersonRequesting)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(inputPersonRequesting, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(210, 210, 210))
+                        .addContainerGap()
+                        .addComponent(scrollPaneChangeToBeMade, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblStudentID)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(280, 280, 280))
+                        .addGap(225, 225, 225)
+                        .addComponent(lblChangeRequest)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblSelectField)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(169, 169, 169)
-                                .addComponent(lblChangeRequest))
+                                .addGap(11, 11, 11)
+                                .addComponent(btnSubmit)
+                                .addGap(95, 95, 95)
+                                .addComponent(btnMainMenu)
+                                .addGap(81, 81, 81)
+                                .addComponent(btnLogout))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lblExplainChange)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(11, 11, 11)
-                                        .addComponent(btnSubmit)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btnMainMenu)))
+                                .addGap(20, 20, 20)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(81, 81, 81)
-                                        .addComponent(btnLogout))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(scrollPaneChangeToBeMade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
+                                    .addComponent(lblSelectField)
+                                    .addComponent(lblStudentID)
+                                    .addComponent(lblPersonRequesting))
+                                .addGap(65, 65, 65)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radioTeacher)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radioAbsences)
-                                        .addGap(29, 29, 29)
-                                        .addComponent(radioAllergies)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(radioStudentID))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radioName)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(radioMedications)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(radioSchedule)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(radioGrades)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(radioAddStudent)
-                                    .addComponent(btnDeleteStudent))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbFieldToEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(inputPersonRequesting, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblExplainChange)))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(12, 12, 12)
+                .addContainerGap()
                 .addComponent(lblChangeRequest)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPersonRequesting)
                     .addComponent(inputPersonRequesting, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -223,53 +155,31 @@ public class ChangeRequest extends javax.swing.JFrame {
                     .addComponent(lblStudentID)
                     .addComponent(inputStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblSelectField)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblSelectField)
+                    .addComponent(cmbFieldToEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(lblExplainChange)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(radioName)
-                    .addComponent(radioMedications)
-                    .addComponent(radioSchedule)
-                    .addComponent(radioGrades)
-                    .addComponent(radioAddStudent))
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(radioTeacher)
-                    .addComponent(radioAbsences)
-                    .addComponent(radioAllergies)
-                    .addComponent(radioStudentID)
-                    .addComponent(btnDeleteStudent))
+                .addComponent(scrollPaneChangeToBeMade, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblExplainChange)
-                        .addGap(54, 54, 54)
                         .addComponent(btnSubmit)
                         .addGap(11, 11, 11)
                         .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(scrollPaneChangeToBeMade, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnLogout)
-                            .addComponent(btnMainMenu))))
-                .addContainerGap(8, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnLogout)
+                        .addComponent(btnMainMenu)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void radioAbsencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAbsencesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_radioAbsencesActionPerformed
-
     private void inputStudentIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputStudentIDActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_inputStudentIDActionPerformed
-
-    private void radioStudentIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioStudentIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_radioStudentIDActionPerformed
 
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
         // TODO add your handling code here:
@@ -296,12 +206,19 @@ public class ChangeRequest extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
+        String name;
         int studentID;
+        String fieldToEdit;
+        String txtBlock;
+        Date reqDate;
         
 	
 	try
 	{
-	    studentID = Integer.parseInt(inputStudentID.getText());
+	    name = inputPersonRequesting.getText();
+            studentID = Integer.parseInt(inputStudentID.getText());
+            fieldToEdit = cmbFieldToEdit.getItemAt(cmbFieldToEdit.getSelectedIndex());
+            txtBlock = inputChangeToBeMade.getText();
 	    this.setVisible(false);
 	    new changeVerified().setVisible(true);
 	}
@@ -310,6 +227,10 @@ public class ChangeRequest extends javax.swing.JFrame {
 	    System.out.println(e.getMessage());
 	}
     }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void cmbFieldToEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbFieldToEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbFieldToEditActionPerformed
 
     /**
      * @param args the command line arguments
@@ -348,11 +269,11 @@ public class ChangeRequest extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton btnDeleteStudent;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMainMenu;
     private javax.swing.JButton btnSubmit;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox<String> cmbFieldToEdit;
     private javax.swing.JTextArea inputChangeToBeMade;
     private javax.swing.JTextField inputPersonRequesting;
     private javax.swing.JTextField inputStudentID;
@@ -362,15 +283,6 @@ public class ChangeRequest extends javax.swing.JFrame {
     private javax.swing.JLabel lblPersonRequesting;
     private javax.swing.JLabel lblSelectField;
     private javax.swing.JLabel lblStudentID;
-    private javax.swing.JRadioButton radioAbsences;
-    private javax.swing.JRadioButton radioAddStudent;
-    private javax.swing.JRadioButton radioAllergies;
-    private javax.swing.JRadioButton radioGrades;
-    private javax.swing.JRadioButton radioMedications;
-    private javax.swing.JRadioButton radioName;
-    private javax.swing.JRadioButton radioSchedule;
-    private javax.swing.JRadioButton radioStudentID;
-    private javax.swing.JRadioButton radioTeacher;
     private javax.swing.JScrollPane scrollPaneChangeToBeMade;
     // End of variables declaration//GEN-END:variables
 }

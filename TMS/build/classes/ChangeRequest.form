@@ -27,94 +27,64 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="lblPersonRequesting" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="inputPersonRequesting" min="-2" pref="170" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
+                      <Component id="scrollPaneChangeToBeMade" min="-2" pref="254" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="lblStudentID" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="inputStudentID" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="280" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
+                      <Component id="lblChangeRequest" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="lblSelectField" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
+              </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
-                              <Component id="lblChangeRequest" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                              <Component id="btnMainMenu" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                              <Component id="btnLogout" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="lblExplainChange" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                      <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnMainMenu" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                                      <Component id="btnLogout" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="scrollPaneChangeToBeMade" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="lblSelectField" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblStudentID" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblPersonRequesting" min="-2" max="-2" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="radioTeacher" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radioAbsences" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                      <Component id="radioAllergies" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="radioStudentID" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="radioName" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="radioMedications" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="radioSchedule" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="radioGrades" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="radioAddStudent" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnDeleteStudent" min="-2" max="-2" attributes="0"/>
+                                  <Component id="inputStudentID" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="cmbFieldToEdit" min="-2" max="-2" attributes="0"/>
+                                  <Component id="inputPersonRequesting" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblExplainChange" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace pref="129" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="lblChangeRequest" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblPersonRequesting" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="inputPersonRequesting" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -125,40 +95,24 @@
                   <Component id="inputStudentID" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="lblSelectField" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblSelectField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmbFieldToEdit" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <Component id="lblExplainChange" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="radioName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="radioMedications" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="radioSchedule" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="radioGrades" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="radioAddStudent" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="radioTeacher" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="radioAbsences" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="radioAllergies" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="radioStudentID" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnDeleteStudent" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="scrollPaneChangeToBeMade" min="-2" pref="61" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="lblExplainChange" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
                       <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Component id="scrollPaneChangeToBeMade" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnLogout" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnMainMenu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="btnLogout" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnMainMenu" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -186,44 +140,6 @@
     <Component class="javax.swing.JLabel" name="lblSelectField">
       <Properties>
         <Property name="text" type="java.lang.String" value="Select field(s) to edit:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="radioName">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Name"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="radioTeacher">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Teacher"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="radioAllergies">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Allergies"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="radioMedications">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Medications"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="radioAbsences">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Absences"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioAbsencesActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="radioGrades">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Grades"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="radioSchedule">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Schedule"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="inputPersonRequesting">
@@ -279,23 +195,29 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLogoutActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="radioStudentID">
+    <Component class="javax.swing.JComboBox" name="cmbFieldToEdit">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Student ID"/>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="10">
+            <StringItem index="0" value="Name"/>
+            <StringItem index="1" value="Medication"/>
+            <StringItem index="2" value="Schedule"/>
+            <StringItem index="3" value="Grades"/>
+            <StringItem index="4" value="Teacher"/>
+            <StringItem index="5" value="Absences"/>
+            <StringItem index="6" value="Allergies"/>
+            <StringItem index="7" value="Student ID"/>
+            <StringItem index="8" value="Delete a student"/>
+            <StringItem index="9" value="Add a student"/>
+          </StringArray>
+        </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioStudentIDActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbFieldToEditActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="radioAddStudent">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Add a student"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="btnDeleteStudent">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Delete a student"/>
-      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

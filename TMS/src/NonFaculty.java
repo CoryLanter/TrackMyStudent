@@ -133,13 +133,15 @@ public class NonFaculty extends javax.swing.JFrame {
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSubmitActionPerformed
     {//GEN-HEADEREND:event_btnSubmitActionPerformed
         // TODO add your handling code here:
-	int studentId;
+	int studentID;
+        
 	
 	try
 	{
-	    studentId = Integer.parseInt(inputStudentId.getText());
+            
+	    studentID = Integer.parseInt(inputStudentId.getText());
 	    this.setVisible(false);
-	    new viewStudent(studentId).setVisible(true);
+	    new viewStudent(studentID).setVisible(true);
 	}
 	catch(InputMismatchException e)
 	{
