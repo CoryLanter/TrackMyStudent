@@ -114,4 +114,35 @@ public class StudentFile
 	    return null;
 	}
     }
+    
+    // reads all the students stored in the binary file to an array list
+    public static ArrayList<Student> readAllStudents()
+    {
+	ArrayList<Student> students = new ArrayList<Student>();
+	ObjectInputStream in;
+	
+	try
+	{
+	    in = new ObjectInputStream(new FileInputStream("students.dat"));
+	    while(true)
+	    {
+		students.add((Student) in.readObject());
+	    }
+	}
+	catch(EOFException eof)
+	{
+	    return students;
+	}
+	catch(IOException | ClassNotFoundException e)
+	{
+	    System.out.println(e.getMessage());
+	    return null;
+	}
+    }
+    
+    // deletes the student with a given Id from the binary file 
+    public static void deleteStudent(int studentId)
+    {
+	
+    }
 }
