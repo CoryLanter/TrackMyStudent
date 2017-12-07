@@ -221,7 +221,13 @@ public class ChangeRequest extends javax.swing.JFrame {
             {
 		fieldToEdit = cmbFieldToEdit.getItemAt(cmbFieldToEdit.getSelectedIndex());
             }
-                txtBlock = inputChangeToBeMade.getText();
+            else
+            {
+                throw new InputMismatchException();
+            }
+            txtBlock = inputChangeToBeMade.getText();
+            reqDate = new Date();
+            ChangeRequestFile.addChangeRequest(new Change(name, studentID, fieldToEdit, txtBlock, reqDate, null), "pendingChangeRequests.dat");
 	    this.setVisible(false);
 	    new changeVerified().setVisible(true);
 	}
