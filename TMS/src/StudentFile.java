@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class StudentFile
 {
     // writes an array of students to a binary file to initialize database
-    public static void writeStudents(Student[] students)
+    public static void writeStudents(ArrayList<Student> students)
     {
 	ObjectOutputStream out;
 	
@@ -28,9 +28,9 @@ public class StudentFile
 	{
 	    out = new ObjectOutputStream(new FileOutputStream("students.dat"));
 	    
-	    for(int i = 0; i < students.length; i++)
+	    for(int i = 0; i < students.size(); i++)
 	    {
-		out.writeObject(students[i]);
+		out.writeObject(students.get(i));
 	    }
 	    out.close();
 	}
@@ -143,6 +143,17 @@ public class StudentFile
     // deletes the student with a given Id from the binary file 
     public static void deleteStudent(int studentId)
     {
+	ArrayList<Student> students = readAllStudents();
 	
+	for(int i = 0; i < students.size(); i++)
+	{
+	    if(students.get(i).getStudentId() == studentId)
+	    {
+		students.remove(i);
+		break;
+	    }
+	}
+	
+	writeStudents(students);
     }
 }
