@@ -10,12 +10,19 @@
  */
 public class pendingChangeRequest extends javax.swing.JFrame {
 
-    /**
-     * Creates new form viewChangeLog
-     */
+    
+        private Change cng;
+    
     public pendingChangeRequest() {
         initComponents();
     }
+   /* 
+   
+    public pendingChangeRequest(String toString) {
+        cng = ChangeRequestFile.readChangeRequests(ArrayList<Change>);
+        initComponents();
+    }
+*/
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,8 +42,7 @@ public class pendingChangeRequest extends javax.swing.JFrame {
         buttonGroup5 = new javax.swing.ButtonGroup();
         btnClosePopup = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        lblChangeRequest = new javax.swing.JLabel();
 
         jScrollPane2.setViewportView(jEditorPane1);
 
@@ -49,12 +55,10 @@ public class pendingChangeRequest extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setText("jTextField1");
-
-        jTextField2.setText("jTextField2");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+        lblChangeRequest.setText("From: " + cng.getName() + ". Student Id: " + cng.getStudentID() + ". Comment: " + cng.getTxtBlock() + "." + " Date of Submission: " + cng.getReqDate() + ".");
+        lblChangeRequest.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                lblChangeRequestComponentAdded(evt);
             }
         });
 
@@ -64,18 +68,14 @@ public class pendingChangeRequest extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)
-                    .addComponent(jTextField1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(lblChangeRequest, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 119, Short.MAX_VALUE))
+                .addComponent(lblChangeRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 211, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -114,9 +114,9 @@ public class pendingChangeRequest extends javax.swing.JFrame {
         new Admin().setVisible(false);
     }//GEN-LAST:event_btnClosePopupActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void lblChangeRequestComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_lblChangeRequestComponentAdded
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_lblChangeRequestComponentAdded
 
     /**
      * @param args the command line arguments
@@ -164,7 +164,6 @@ public class pendingChangeRequest extends javax.swing.JFrame {
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel lblChangeRequest;
     // End of variables declaration//GEN-END:variables
 }
