@@ -147,4 +147,20 @@ public class StudentFile
 	
 	writeStudents(students);
     }
+    
+    public static void editStudent(Student student)
+    {
+	ArrayList<Student> students = readAllStudents();
+	
+	for(int i = 0; i < students.size(); i++)
+	{
+	    if(students.get(i).getStudentId() == student.getStudentId())
+	    {
+		students.remove(i);
+		break;
+	    }
+	}
+	students.add(student);
+	writeStudents(students);
+    }
 }
