@@ -218,8 +218,16 @@ public class ChangeRequest extends javax.swing.JFrame {
 	    name = inputPersonRequesting.getText();
             studentID = Integer.parseInt(inputStudentID.getText());
 	    if(cmbFieldToEdit.getSelectedIndex() != -1)
+            {
 		fieldToEdit = cmbFieldToEdit.getItemAt(cmbFieldToEdit.getSelectedIndex());
+            }
+            else
+            {
+                throw new InputMismatchException();
+            }
             txtBlock = inputChangeToBeMade.getText();
+            reqDate = new Date();
+            ChangeRequestFile.addChangeRequest(new Change(name, studentID, fieldToEdit, txtBlock, reqDate, null), "pendingChangeRequests.dat");
 	    this.setVisible(false);
 	    new changeVerified().setVisible(true);
 	}
