@@ -1,4 +1,7 @@
 
+import java.util.InputMismatchException;
+
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -293,8 +296,19 @@ public class ChangeRequest extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        new changeVerified().setVisible(true);
+        int studentID;
+        
+	
+	try
+	{
+	    studentID = Integer.parseInt(inputStudentID.getText());
+	    this.setVisible(false);
+	    new changeVerified().setVisible(true);
+	}
+	catch(InputMismatchException e)
+	{
+	    System.out.println(e.getMessage());
+	}
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**
