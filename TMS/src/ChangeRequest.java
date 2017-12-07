@@ -217,7 +217,8 @@ public class ChangeRequest extends javax.swing.JFrame {
 	{
 	    name = inputPersonRequesting.getText();
             studentID = Integer.parseInt(inputStudentID.getText());
-            fieldToEdit = cmbFieldToEdit.getItemAt(cmbFieldToEdit.getSelectedIndex());
+	    if(cmbFieldToEdit.getSelectedIndex() != -1)
+		fieldToEdit = cmbFieldToEdit.getItemAt(cmbFieldToEdit.getSelectedIndex());
             txtBlock = inputChangeToBeMade.getText();
 	    this.setVisible(false);
 	    new changeVerified().setVisible(true);

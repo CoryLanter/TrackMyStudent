@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 
-
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
