@@ -105,14 +105,12 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lblChangeRequest">
-          <Properties>
-            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;From: &quot; + cng.getName() + &quot;. Student Id: &quot; + cng.getStudentID() + &quot;. Comment: &quot; + cng.getTxtBlock() + &quot;.&quot; + &quot; Date of Submission: &quot; + cng.getReqDate() + &quot;.&quot;" type="code"/>
-            </Property>
-          </Properties>
           <Events>
             <EventHandler event="componentAdded" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="lblChangeRequestComponentAdded"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="lblChangeRequest.setText(&quot;Request:  &quot; + changes);"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

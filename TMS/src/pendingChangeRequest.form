@@ -108,6 +108,9 @@
           <Events>
             <EventHandler event="componentAdded" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="lblChangeRequestComponentAdded"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="lblChangeRequest.setText(&quot;Request:  &quot; + changes);"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

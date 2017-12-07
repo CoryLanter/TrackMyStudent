@@ -28,8 +28,7 @@ public class pendingChangeRequest extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
@@ -47,18 +46,15 @@ public class pendingChangeRequest extends javax.swing.JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnClosePopup.setText("Close");
-        btnClosePopup.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnClosePopup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClosePopupActionPerformed(evt);
             }
         });
 
-        lblChangeRequest.addContainerListener(new java.awt.event.ContainerAdapter()
-        {
-            public void componentAdded(java.awt.event.ContainerEvent evt)
-            {
+        lblChangeRequest.setText("Request:  " + changes);
+        lblChangeRequest.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
                 lblChangeRequestComponentAdded(evt);
             }
         });
