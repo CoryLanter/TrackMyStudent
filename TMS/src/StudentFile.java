@@ -81,7 +81,7 @@ public class StudentFile
     */
     public static ArrayList<Student> readStudentsByTeacher(String teacher)
     {
-	ArrayList<Student> students = new ArrayList<Student>();
+	ArrayList<Student> students = new ArrayList<>();
 	ObjectInputStream in;
 	Student stu;
 	
@@ -109,7 +109,7 @@ public class StudentFile
     // reads all the students stored in the binary file to an array list
     public static ArrayList<Student> readAllStudents()
     {
-	ArrayList<Student> students = new ArrayList<Student>();
+	ArrayList<Student> students = new ArrayList<>();
 	ObjectInputStream in;
 	
 	try
