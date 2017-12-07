@@ -41,6 +41,7 @@ public class Faculty extends javax.swing.JFrame {
         btnSubmitStudentId = new javax.swing.JButton();
         btnSubmitTeacherName = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
+        lblError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +105,8 @@ public class Faculty extends javax.swing.JFrame {
 
         lblTitle.setText("Welcome Faculty");
 
+        lblError.setForeground(new java.awt.Color(204, 0, 0));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -125,8 +128,10 @@ public class Faculty extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblSelectTeacherName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cmbSelectTeacherName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(19, 19, 19))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblError)
+                            .addComponent(cmbSelectTeacherName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(13, 13, 13))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(btnChangeRequest)
@@ -153,13 +158,15 @@ public class Faculty extends javax.swing.JFrame {
                     .addComponent(inputStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSubmitStudentId)
-                .addGap(37, 37, 37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblError)
+                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cmbSelectTeacherName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSelectTeacherName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSubmitTeacherName)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnChangeRequest)
                     .addComponent(btnLogout))
@@ -188,18 +195,8 @@ public class Faculty extends javax.swing.JFrame {
 
     private void btnSubmitStudentIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitStudentIdActionPerformed
         // TODO add your handling code here:
-        int studentId;
-	
-	try
-	{
-	    studentId = Integer.parseInt(inputStudentId.getText());
-	    this.setVisible(false);
-	    new viewStudent(studentId).setVisible(true);
-	}
-	catch(InputMismatchException e)
-	{
-	    System.out.println(e.getMessage());
-	}
+        ButtonFunctions.viewStudentButton(lblError, inputStudentId);
+	this.setVisible(false);
     }//GEN-LAST:event_btnSubmitStudentIdActionPerformed
 
     private void cmbSelectTeacherNameActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbSelectTeacherNameActionPerformed
@@ -262,6 +259,7 @@ public class Faculty extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbSelectTeacherName;
     private javax.swing.JTextField inputStudentId;
     private java.awt.Label lblEnterStudId;
+    public javax.swing.JLabel lblError;
     private java.awt.Label lblSelectTeacherName;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables

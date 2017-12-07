@@ -46,6 +46,7 @@ public class Admin extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         inputEditStudent = new javax.swing.JTextField();
         btnSubmitEditStudent = new javax.swing.JButton();
+        lblError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,6 +101,8 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lblError)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSubmitViewStudent))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -151,7 +154,9 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(lblviewStudent)
                     .addComponent(inputStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnSubmitViewStudent)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSubmitViewStudent)
+                    .addComponent(lblError))
                 .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblViewTeacher)
@@ -196,18 +201,7 @@ public class Admin extends javax.swing.JFrame {
     private void btnSubmitViewStudentActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSubmitViewStudentActionPerformed
     {//GEN-HEADEREND:event_btnSubmitViewStudentActionPerformed
         // TODO add your handling code here:
-	int studentId;
-	
-	try
-	{
-	    studentId = Integer.parseInt(inputStudentId.getText());
-	    this.setVisible(false);
-	    new viewStudent(studentId).setVisible(true);
-	}
-	catch(InputMismatchException e)
-	{
-	    System.out.println(e.getMessage());
-	}
+	ButtonFunctions.viewStudentButton(lblError, inputStudentId);
     }//GEN-LAST:event_btnSubmitViewStudentActionPerformed
 
     /**
@@ -258,6 +252,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblEditStudent;
+    private javax.swing.JLabel lblError;
     private javax.swing.JLabel lblViewTeacher;
     private javax.swing.JLabel lblWelcome;
     private javax.swing.JLabel lblviewStudent;
