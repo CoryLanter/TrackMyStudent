@@ -138,7 +138,7 @@ public class NonFaculty extends javax.swing.JFrame {
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSubmitActionPerformed
     {//GEN-HEADEREND:event_btnSubmitActionPerformed
         // TODO add your handling code here:
-	ButtonFunctions.viewStudentButton(lblError, inputStudentId);
+	ButtonFunctions.viewStudentButton(this, lblError, inputStudentId);
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**

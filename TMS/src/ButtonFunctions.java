@@ -1,5 +1,6 @@
 
 import java.util.InputMismatchException;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -15,7 +16,7 @@ import javax.swing.JTextField;
  */
 public class ButtonFunctions
 {
-    public static void viewStudentButton(JLabel error, JTextField txtField)
+    public static void viewStudentButton(JFrame caller, JLabel error, JTextField txtField)
     {
 	int studentId;
 	Student stu;
@@ -27,6 +28,7 @@ public class ButtonFunctions
 	    {
 		throw new InputMismatchException();
 	    }
+	    caller.setVisible(false);
 	    new viewStudent(stu).setVisible(true);
 	}
 	catch(InputMismatchException e)

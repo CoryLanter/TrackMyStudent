@@ -195,8 +195,7 @@ public class Faculty extends javax.swing.JFrame {
 
     private void btnSubmitStudentIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitStudentIdActionPerformed
         // TODO add your handling code here:
-        ButtonFunctions.viewStudentButton(lblError, inputStudentId);
-	this.setVisible(false);
+        ButtonFunctions.viewStudentButton(this, lblError, inputStudentId);
     }//GEN-LAST:event_btnSubmitStudentIdActionPerformed
 
     private void cmbSelectTeacherNameActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbSelectTeacherNameActionPerformed
