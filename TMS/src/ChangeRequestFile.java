@@ -68,7 +68,7 @@ public class ChangeRequestFile
     // adds a change request to a given file
     public static void addChangeRequest(Change newChange, String fileName)
     {
-	ArrayList<Change> changes = new ArrayList<>();// readChangeRequests(fileName);
+	ArrayList<Change> changes = readChangeRequests(fileName);
 	changes.add(newChange);
 	writeChangeRequests(changes, fileName);
     }
