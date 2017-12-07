@@ -18,8 +18,8 @@ import java.util.ArrayList;
  */
 public class ChangeRequestFile
 {
-    // adds a change request to a given file
-    public static void addChangeRequest(Change newChange, String fileName)
+    // writes all changes in a given array list to a binary file
+    public static void writeChangeRequests(ArrayList<Change> changes, String fileName)
     {
 	ObjectOutputStream out;
 	
@@ -27,8 +27,10 @@ public class ChangeRequestFile
 	{
 	    out = new ObjectOutputStream(new FileOutputStream(fileName));
 	    
-	    out.writeObject(newChange);
-	    
+	    for(int i = 0; i < changes.size(); i++)
+	    {
+		out.writeObject(changes.get(i));
+	    }
 	    out.close();
 	}
 	catch(IOException e)
@@ -40,7 +42,7 @@ public class ChangeRequestFile
     // reads in all change requests from a given file
     public static ArrayList<Change> readChangeRequests(String fileName)
     {
-	ArrayList<Change> changes = new ArrayList<Change>();
+	ArrayList<Change> changes = new ArrayList<>();
 	ObjectInputStream in;
 	Change change;
 	
@@ -62,4 +64,30 @@ public class ChangeRequestFile
 	    return null;
 	}
     }   
+
+    // adds a change request to a given file
+    public static void addChangeRequest(Change newChange, String fileName)
+    {
+	ArrayList<Change> changes = readChangeRequests(fileName);
+	changes.add(newChange);
+	writeChangeRequests(changes, fileName);
+    }
+    
+    // deletes a change request from the pending change request file
+    public static void deleteChangeRequest(int changeId)
+    {
+	String fileName = "pendingChangeRequests.dat";
+	ArrayList<Change> changes = readChangeRequests(fileName);
+	
+	for(int i = 0; i < changes.size(); i++)
+	{
+	    if(changes.get(i).getChangeId() == changeId)
+	    {
+		changes.remove(i);
+		break;
+	    }
+	}
+	
+	writeChangeRequests(changes, fileName);
+    }
 }
