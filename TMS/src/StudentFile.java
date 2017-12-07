@@ -43,19 +43,10 @@ public class StudentFile
     // adds a single student to the binary file
     public static void addStudent(Student student)
     {
-	ObjectOutputStream out;
+	ArrayList<Student> students = readAllStudents();
 	
-	try
-	{
-	    out = new ObjectOutputStream(new FileOutputStream("students.dat"));
-	    
-	    out.writeObject(student);
-	    out.close();
-	}
-	catch(IOException e)
-	{
-	    System.out.println(e.getMessage());
-	}
+	students.add(student);
+	writeStudents(students);
     }
     
     // scans the binary file for a student with a matching Id and returns it
