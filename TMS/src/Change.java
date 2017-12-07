@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -14,39 +13,46 @@ import java.util.Date;
  */
 public class Change implements Serializable
 {
-private String name; //Person's name of who is requesting the change
-private int studentID; //Student ID to be changed
-private String fieldToEdit; //String to be built to interact with the radio buttons in ChangeRequest
-private String txtBlock; //Text block to be written in
-private Date reqDate; //Date of which the request is submitted
-//private int confId; //
-//private static int counterID;
+    private String name; //Person's name of who is requesting the change
+    private int studentID; //Student ID to be changed
+    private String fieldToEdit; //String to be built to interact with the radio buttons in ChangeRequest
+    private String txtBlock; //Text block to be written in
+    private Date reqDate; //Date of which the request is submitted
+    private int changeId; // identifies the change request (6 digit)
+    private static int idCounter = 100000; // used to generate changeId
     
-    public Change(String name, int studentID, String fieldToEdit, String txtBlock, Date reqDate){
+    public Change(String name, int studentID, String fieldToEdit, String txtBlock, Date reqDate)
+    {
         this.name = name;
         this.studentID = studentID;
         this.fieldToEdit = fieldToEdit;
         this.txtBlock = txtBlock;
         this.reqDate = reqDate;
+	this.changeId = idCounter;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public int getStudentID() {
+    public int getStudentID()
+    {
         return studentID;
     }
 
-    public void setStudentID(int studentID) {
+    public void setStudentID(int studentID)
+    {
         this.studentID = studentID;
     }
 
-    public String getFieldToEdit() {
+    public String getFieldToEdit()
+    {
         return fieldToEdit;
     }
 
@@ -54,25 +60,46 @@ private Date reqDate; //Date of which the request is submitted
         this.fieldToEdit = fieldToEdit;
     }
 
-    public String getTxtBlock() {
+    public String getTxtBlock()
+    {
         return txtBlock;
     }
 
-    public void setTxtBlock(String txtBlock) {
+    public void setTxtBlock(String txtBlock)
+    {
         this.txtBlock = txtBlock;
     }
 
-    public Date getReqDate() {
+    public Date getReqDate()
+    {
         return reqDate;
     }
 
-    public void setReqDate(Date reqDate) {
+    public void setReqDate(Date reqDate)
+    {
         this.reqDate = reqDate;
     }
 
-     public String toString()
+    public int getChangeId()
     {
-	return "From: " + this.getName() + ". Student Id: " + this.getStudentID() + ". Comment: " + this.getTxtBlock() + "." + " Date of Submission: " + this.getReqDate() + ".";
+	return changeId;
+    }
+
+    public void setChangeId(int changeId)
+    {
+	this.changeId = changeId;
+    }
+
+    public static int getIdCounter()
+    {
+	return idCounter;
+    }
+    
+    public String toString()
+    {
+	return "From: " + this.getName() + ". Student Id: "
+		+ this.getStudentID() + ". Comment: " + this.getTxtBlock() + "."
+		+ " Date of Submission: " + this.getReqDate() + ".";
     }
 }
 
