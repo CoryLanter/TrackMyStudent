@@ -206,9 +206,9 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(cmbBoxTeachers.getSelectedIndex() != -1)
 	{
-	    String teacher = cmbBoxTeachers.getItemAt(cmbBoxTeachers.getSelectedIndex());
+	    String studentId = cmbBoxTeachers.getItemAt(cmbBoxTeachers.getSelectedIndex());
 	    this.setVisible(false);
-	    new viewClass(teacher).setVisible(true);
+	    new EditStudent().setVisible(true);
 	}
     }//GEN-LAST:event_btnSubmitEditStudentActionPerformed
 
