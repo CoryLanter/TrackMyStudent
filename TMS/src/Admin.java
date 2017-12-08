@@ -79,10 +79,20 @@ public class Admin extends javax.swing.JFrame {
         });
 
         btnSubmitViewClass.setText("Submit");
+        btnSubmitViewClass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitViewClassActionPerformed(evt);
+            }
+        });
 
         lblEditStudent.setText("To edit a Student, enter Student ID:");
 
         jButton1.setText("Add student");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         btnSubmitEditStudent.setText("Submit");
         btnSubmitEditStudent.addActionListener(new java.awt.event.ActionListener() {
@@ -204,13 +214,24 @@ public class Admin extends javax.swing.JFrame {
 
     private void btnSubmitEditStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitEditStudentActionPerformed
         // TODO add your handling code here:
+       
+    }//GEN-LAST:event_btnSubmitEditStudentActionPerformed
+
+    private void btnSubmitViewClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitViewClassActionPerformed
+        // TODO add your handling code here:
         if(cmbBoxTeachers.getSelectedIndex() != -1)
 	{
 	    String teacher = cmbBoxTeachers.getItemAt(cmbBoxTeachers.getSelectedIndex());
 	    this.setVisible(false);
 	    new viewClass(teacher).setVisible(true);
 	}
-    }//GEN-LAST:event_btnSubmitEditStudentActionPerformed
+    }//GEN-LAST:event_btnSubmitViewClassActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new EditStudent().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -216,6 +216,21 @@ public class EditStudent extends javax.swing.JFrame {
         //Need code here to make the edit save to student.txt and go to log/backup log
      //   this.setVisible(false);
      //   new ().setVisible(true);
+            
+        Student student = new Student("",0,"","","","","","",0);
+            student.setName(inputName.getText());
+            student.setStudentId(Integer.parseInt(inputStudentID.getText()));
+            student.setTeacher(inputTeacher.getText());
+            student.setAllergies(inputAllergies.getText());
+            student.setMedications(inputMedications.getText());
+            student.setAbsences(Integer.parseInt(inputAbsences.getText()));
+            student.setAvgGrade(inputGrades.getText());
+            student.setBlock(inputSchedule.getText());
+           
+            StudentFile.addStudent(student);
+            this.setVisible(false);
+            new viewStudent(student).setVisible(true);
+        //}
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed

@@ -28,11 +28,11 @@ public class Student implements Serializable
     private String allergies; // list of student's allergies seperated by commas
     private String medications; // list of student's medications seperated by commas
     private String address; // student's address
-    private char avgGrade; // average letter grade from major subjects
-    private char block; // student's lunch block
+    private String avgGrade; // average letter grade from major subjects
+    private String block; // student's lunch block
     private int absences; //Number of student's absences per school year
 
-    public Student(String name, int studentId, String teacher, String allergies, String medications, String address, char avgGrades, char block, int absences)
+    public Student(String name, int studentId, String teacher, String allergies, String medications, String address, String avgGrades, String block, int absences)
     {
 	this.name = name;
 	this.studentId = studentId;
@@ -105,22 +105,22 @@ public class Student implements Serializable
 	this.address = address;
     }
 
-    public char getAvgGrade()
+    public String getAvgGrade()
     {
 	return avgGrade;
     }
 
-    public void setAvgGrade(char avgGrade)
+    public void setAvgGrade(String avgGrade)
     {
 	this.avgGrade = avgGrade;
     }
 
-    public char getBlock()
+    public String getBlock()
     {
 	return block;
     }
 
-    public void setBlock(char block)
+    public void setBlock(String block)
     {
 	this.block = block;
     }
