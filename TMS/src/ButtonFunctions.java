@@ -36,4 +36,25 @@ public class ButtonFunctions
 	    error.setText("Student not found");
 	}
     }
+    
+    public static void editStudentButton(JFrame caller, JLabel error, JTextField txtField)
+    {
+	int studentId;
+	Student stu;
+	
+	try
+	{
+	    studentId = Integer.parseInt(txtField.getText());
+	    if((stu = StudentFile.readStudentById(studentId)) == null)
+	    {
+		throw new InputMismatchException();
+	    }
+	    caller.setVisible(false);
+	    new EditStudent(stu).setVisible(true);
+	}
+	catch(InputMismatchException e)
+	{
+	    error.setText("Student not found");
+	}
+    }
 }

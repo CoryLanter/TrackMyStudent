@@ -24,7 +24,6 @@ public class viewStudentTest {
     public static void setUpClass() {
     }
     
-    
     @AfterClass
     public static void tearDownClass() {
     }

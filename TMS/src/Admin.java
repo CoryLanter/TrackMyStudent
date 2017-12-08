@@ -29,8 +29,7 @@ public class Admin extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         lblWelcome = new javax.swing.JLabel();
         lblviewStudent = new javax.swing.JLabel();
@@ -55,10 +54,8 @@ public class Admin extends javax.swing.JFrame {
         lblviewStudent.setText("To view a Student, enter Student ID:");
 
         btnSubmitViewStudent.setText("Submit");
-        btnSubmitViewStudent.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnSubmitViewStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitViewStudentActionPerformed(evt);
             }
         });
@@ -68,19 +65,15 @@ public class Admin extends javax.swing.JFrame {
         cmbBoxTeachers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Johnson", "Smith", "Eddy", "Brown" }));
 
         btnViewChangeRequest.setText("View Change Requests");
-        btnViewChangeRequest.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnViewChangeRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewChangeRequestActionPerformed(evt);
             }
         });
 
         btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
             }
         });
@@ -92,6 +85,11 @@ public class Admin extends javax.swing.JFrame {
         jButton1.setText("Add student");
 
         btnSubmitEditStudent.setText("Submit");
+        btnSubmitEditStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitEditStudentActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -179,7 +177,7 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnViewChangeRequest)
                     .addComponent(btnLogout))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -203,6 +201,16 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
 	ButtonFunctions.viewStudentButton(this, lblError, inputStudentId);
     }//GEN-LAST:event_btnSubmitViewStudentActionPerformed
+
+    private void btnSubmitEditStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitEditStudentActionPerformed
+        // TODO add your handling code here:
+        if(cmbBoxTeachers.getSelectedIndex() != -1)
+	{
+	    String teacher = cmbBoxTeachers.getItemAt(cmbBoxTeachers.getSelectedIndex());
+	    this.setVisible(false);
+	    new viewClass(teacher).setVisible(true);
+	}
+    }//GEN-LAST:event_btnSubmitEditStudentActionPerformed
 
     /**
      * @param args the command line arguments

@@ -11,11 +11,16 @@
  * @author user
  */
 public class EditStudent extends javax.swing.JFrame {
-
+    private Student stu;
     /**
      * Creates new form viewStudent
      */
     public EditStudent() {
+        initComponents();
+    }
+    
+    public EditStudent(Student student){
+        stu = student;
         initComponents();
     }
 
