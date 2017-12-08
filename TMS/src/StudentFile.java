@@ -44,7 +44,7 @@ public class StudentFile
     {
 	ArrayList<Student> students = readAllStudents();
 	
-	//students.add(student);
+	students.add(student);
 	writeStudents(students);
     }
     
