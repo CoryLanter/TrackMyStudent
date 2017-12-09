@@ -42,7 +42,7 @@ public class Admin extends javax.swing.JFrame {
         btnLogout = new javax.swing.JButton();
         btnSubmitViewClass = new javax.swing.JButton();
         lblEditStudent = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnAddStudent = new javax.swing.JButton();
         inputEditStudent = new javax.swing.JTextField();
         btnSubmitEditStudent = new javax.swing.JButton();
         lblError = new javax.swing.JLabel();
@@ -79,13 +79,18 @@ public class Admin extends javax.swing.JFrame {
         });
 
         btnSubmitViewClass.setText("Submit");
+        btnSubmitViewClass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitViewClassActionPerformed(evt);
+            }
+        });
 
         lblEditStudent.setText("To edit a Student, enter Student ID:");
 
-        jButton1.setText("Add student");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAddStudent.setText("Add student");
+        btnAddStudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAddStudentActionPerformed(evt);
             }
         });
 
@@ -113,7 +118,7 @@ public class Admin extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnAddStudent)
                 .addGap(53, 53, 53)
                 .addComponent(btnSubmitEditStudent)
                 .addContainerGap())
@@ -171,7 +176,7 @@ public class Admin extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblEditStudent)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1)
+                        .addComponent(btnAddStudent)
                         .addGap(21, 21, 21)
                         .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
@@ -209,19 +214,22 @@ public class Admin extends javax.swing.JFrame {
 
     private void btnSubmitEditStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitEditStudentActionPerformed
         // TODO add your handling code here:
-        if(cmbBoxTeachers.getSelectedIndex() != -1)
-	{
-	    String studentId = cmbBoxTeachers.getItemAt(cmbBoxTeachers.getSelectedIndex());
-	    this.setVisible(false);
-	    new AddStudent().setVisible(true);
-	}
+        this.setVisible(false);
+        new EditStudent(Integer.parseInt(inputEditStudent.getText())).setVisible(true); 
     }//GEN-LAST:event_btnSubmitEditStudentActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAddStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddStudentActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
         new AddStudent().setVisible(true); 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAddStudentActionPerformed
+
+    private void btnSubmitViewClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitViewClassActionPerformed
+        // TODO add your handling code here:
+	    this.setVisible(false);
+            new viewClass(cmbBoxTeachers.getItemAt(cmbBoxTeachers.getSelectedIndex())).setVisible(true);
+	//}
+    }//GEN-LAST:event_btnSubmitViewClassActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,6 +268,7 @@ public class Admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddStudent;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnSubmitEditStudent;
     private javax.swing.JButton btnSubmitViewClass;
@@ -268,7 +277,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbBoxTeachers;
     private javax.swing.JTextField inputEditStudent;
     private javax.swing.JTextField inputStudentId;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblEditStudent;
     private javax.swing.JLabel lblError;
