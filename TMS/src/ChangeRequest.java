@@ -211,7 +211,7 @@ public class ChangeRequest extends javax.swing.JFrame {
             change.setStudentID(Integer.parseInt(inputStudentID.getText()));
             change.setFieldToEdit(cmbFieldToEdit.getItemAt(cmbFieldToEdit.getSelectedIndex()));
             change.setTxtBlock(inputChangeToBeMade.getText());
-            ChangeRequestFile.addChangeRequest(change, "pendingChangeRequest.dat");
+            ChangeRequestFile.addChangeRequest(change, "pendingChangeRequests.dat");
             
             this.setVisible(false);
             new changeVerified().setVisible(true);
