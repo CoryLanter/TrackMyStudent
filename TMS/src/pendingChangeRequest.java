@@ -26,8 +26,9 @@ public class pendingChangeRequest extends javax.swing.JFrame
             rowData[1] = list.get(i).getStudentID();
             rowData[2] = list.get(i).getFieldToEdit();
             rowData[3] = list.get(i).getTxtBlock();
-            rowData[4] = list.get(i).getReqDate();
+            rowData[4] = list.get(i).getIdCounter();
             model.addRow(rowData);
+        
         }
     }
     
@@ -69,7 +70,7 @@ public class pendingChangeRequest extends javax.swing.JFrame
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 196, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,7 +150,8 @@ public class pendingChangeRequest extends javax.swing.JFrame
        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
        int SelectedRow = jTable1.getSelectedRow();
        model.removeRow(SelectedRow);
-       ChangeRequestFile.deleteChangeRequest(SelectedRow);
+       ChangeRequestFile.deleteChangeRequest(Change.getIdCounter());
+       ChangeRequestFile.addChangeRequest(cng, "pendingChangeRequest.dat");
        ChangeRequestFile.addChangeRequest(cng, "log.dat");
     }//GEN-LAST:event_btnResolveChangeActionPerformed
 

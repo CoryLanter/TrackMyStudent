@@ -20,7 +20,7 @@ public class Change implements Serializable
     private Date reqDate; // Date of which the request is submitted
     private Date resolveDate; // Date of which the request is resolved
     private int changeId; // identifies the change request (6 digit)
-    private static int idCounter = 100000; // used to generate changeId
+    private static int idCounter = 1; // used to generate changeId
     
     public Change(String name, int studentID, String fieldToEdit, String txtBlock, Date reqDate, Date resolveDate)
     {
@@ -30,7 +30,7 @@ public class Change implements Serializable
         this.txtBlock = txtBlock;
         this.reqDate = reqDate;
         this.resolveDate = resolveDate;
-	this.changeId = idCounter++;
+	this.changeId = 0;
     }
 
     public String getName()
@@ -102,6 +102,7 @@ public class Change implements Serializable
 
     public static int getIdCounter()
     {
+        idCounter++;
 	return idCounter;
     }
     

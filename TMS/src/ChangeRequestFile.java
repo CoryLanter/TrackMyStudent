@@ -90,3 +90,24 @@ public class ChangeRequestFile
 	writeChangeRequests(changes, fileName);
     }
 }
+
+  /*
+    // edits change request from the pending change request file
+    public static void editChangeRequest(Change newChange, String fileName)
+    {
+	String fileName = "pendingChangeRequests.dat";
+	ArrayList<Change> changes = readChangeRequests(fileName);
+	
+	for(int i = 0; i < changes.size(); i++)
+	{
+	    if(changes.get(i).getChangeId() == changeId)
+	    {
+		changes.remove(i);
+		break;
+	    }
+	}
+	
+	writeChangeRequests(changes, fileName);
+    }
+}
+*/
