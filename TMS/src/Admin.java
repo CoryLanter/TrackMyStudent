@@ -62,7 +62,7 @@ public class Admin extends javax.swing.JFrame {
 
         lblViewTeacher.setText("To view a classlist, select Teacher's name:");
 
-        cmbBoxTeachers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Johnson", "Smith", "Eddy", "Brown" }));
+        cmbBoxTeachers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Beddy", "Walker" }));
 
         btnViewChangeRequest.setText("View Change Requests");
         btnViewChangeRequest.addActionListener(new java.awt.event.ActionListener() {
