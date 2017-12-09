@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -25,9 +26,22 @@ public class viewClass extends javax.swing.JFrame {
     }
     
     public viewClass(String teacher) {
-	students = StudentFile.readStudentsByTeacher(teacher);
+        students = StudentFile.readStudentsByTeacher(teacher);
         initComponents();
+        addRowToTable(teacher);
     }
+    
+    public void addRowToTable(String teacherSelected){
+        DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+        ArrayList<Student> list = StudentFile.readStudentsByTeacher(teacherSelected);
+        Object rowData[] = new Object[3];
+        for(int i= 0; i < list.size(); i++){
+            rowData[0] = list.get(i).getName();
+            rowData[1] = list.get(i).getStudentId();
+            rowData[2] = list.get(i).getAvgGrade();
+            model.addRow(rowData);
+        }
+    }    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,12 +52,21 @@ public class viewClass extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList<>();
         lblViewClass = new javax.swing.JLabel();
         btnChangeRequest = new javax.swing.JButton();
         btnMainMenu = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+
+        jList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList3);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,30 +93,35 @@ public class viewClass extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane2.setViewportView(jList1);
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Student Name", "Student ID", "Grade"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnChangeRequest)
-                        .addGap(48, 48, 48)
-                        .addComponent(btnMainMenu)
-                        .addGap(45, 45, 45)
-                        .addComponent(btnLogout)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(199, 199, 199)
+                .addGap(148, 148, 148)
                 .addComponent(lblViewClass)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnChangeRequest)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnMainMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnLogout)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,8 +129,8 @@ public class viewClass extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblViewClass)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnChangeRequest)
                     .addComponent(btnMainMenu)
@@ -182,8 +210,10 @@ public class viewClass extends javax.swing.JFrame {
     private javax.swing.JButton btnChangeRequest;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMainMenu;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JList<String> jList3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTable2;
     private javax.swing.JLabel lblViewClass;
     // End of variables declaration//GEN-END:variables
 }
