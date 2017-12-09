@@ -23,10 +23,10 @@ public class pendingChangeRequest extends javax.swing.JFrame
         Object rowData[] = new Object[5];
         for(int i= 0; i < list.size(); i++){
             rowData[0] = list.get(i).getName();
-            rowData[0] = list.get(i).getStudentID();
-            rowData[0] = list.get(i).getFieldToEdit();
-            rowData[0] = list.get(i).getTxtBlock();
-            rowData[0] = list.get(i).getReqDate();
+            rowData[1] = list.get(i).getStudentID();
+            rowData[2] = list.get(i).getFieldToEdit();
+            rowData[3] = list.get(i).getTxtBlock();
+            rowData[4] = list.get(i).getReqDate();
             model.addRow(rowData);
         }
     }
@@ -149,6 +149,7 @@ public class pendingChangeRequest extends javax.swing.JFrame
        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
        int SelectedRow = jTable1.getSelectedRow();
        model.removeRow(SelectedRow);
+       ChangeRequestFile.deleteChangeRequest(SelectedRow);
        ChangeRequestFile.addChangeRequest(cng, "log.dat");
     }//GEN-LAST:event_btnResolveChangeActionPerformed
 
