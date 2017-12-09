@@ -26,7 +26,7 @@ public class pendingChangeRequest extends javax.swing.JFrame
             rowData[1] = list.get(i).getStudentID();
             rowData[2] = list.get(i).getFieldToEdit();
             rowData[3] = list.get(i).getTxtBlock();
-            rowData[4] = list.get(i).getIdCounter();
+            rowData[4] = list.get(i).getChangeId();
             model.addRow(rowData);
         
         }
@@ -146,13 +146,19 @@ public class pendingChangeRequest extends javax.swing.JFrame
     }//GEN-LAST:event_btnClosePopupActionPerformed
 
     private void btnResolveChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolveChangeActionPerformed
-       
+
        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-       int SelectedRow = jTable1.getSelectedRow();
-       model.removeRow(SelectedRow);
-       ChangeRequestFile.deleteChangeRequest(Change.getIdCounter());
-       ChangeRequestFile.addChangeRequest(cng, "pendingChangeRequest.dat");
-       ChangeRequestFile.addChangeRequest(cng, "log.dat");
+       int i = jTable1.getSelectedRow();
+       Change change = new Change("",0,"","",null,null);
+       change.setName(model.getValueAt(i,0).toString());
+       change.setStudentID(Integer.parseInt(model.getValueAt(i,1).toString()));
+       change.setFieldToEdit(model.getValueAt(i,2).toString());
+       change.setTxtBlock(model.getValueAt(i,3).toString());
+       change.setChangeId(Integer.parseInt(model.getValueAt(i,4).toString()));
+       ChangeRequestFile.addChangeRequest(change, "log.dat");
+       ChangeRequestFile.addChangeRequest(change, "backupLog.dat");
+       ChangeRequestFile.deleteChangeRequest(change.getChangeId());
+       model.removeRow(i);
     }//GEN-LAST:event_btnResolveChangeActionPerformed
 
     /**

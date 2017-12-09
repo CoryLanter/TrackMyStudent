@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -36,25 +37,27 @@ public class ButtonFunctions
 	    error.setText("Student not found");
 	}
     }
-    /*
-    public static void editStudentButton(JFrame caller, JLabel error, JTextField txtField)
-    {
-	int studentId;
-	Student stu;
-	
-	try
-	{
-	    studentId = Integer.parseInt(txtField.getText());
-	    if((stu = StudentFile.readStudentById(studentId)) == null)
-	    {
-		throw new InputMismatchException();
-	    }
-	    caller.setVisible(false);
-	    new EditStudent(stu).setVisible(true);
-	}
-	catch(InputMismatchException e)
-	{
-	    error.setText("Student not found");
-	}
-    }*/
+    public static int findId(){
+        int count = 1;
+        int k = 0;
+        Change cng;
+       ArrayList<Change> list = ChangeRequestFile.readChangeRequests("pendingChangeRequests.dat");
+        while(k != list.size())
+        {
+            for(int i = 0; i < list.size(); i++)
+            {
+                if(list.get(i).getChangeId() == count ) 
+                {
+                    count++;
+                    k=0;
+                }
+                else{
+                    k++; 
+                }
+                
+            }
+            
+        }
+        return count; 
+    }
 }

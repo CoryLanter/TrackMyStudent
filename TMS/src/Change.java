@@ -31,6 +31,8 @@ public class Change implements Serializable
         this.reqDate = reqDate;
         this.resolveDate = resolveDate;
 	this.changeId = 0;
+        
+        
     }
 
     public String getName()
@@ -92,11 +94,13 @@ public class Change implements Serializable
 
     public int getChangeId()
     {
+       // ButtonFunctions.findId();
 	return changeId;
     }
 
     public void setChangeId(int changeId)
     {
+        
 	this.changeId = changeId;
     }
 
@@ -115,5 +119,4 @@ public class Change implements Serializable
     }
 }
 
-    
 
