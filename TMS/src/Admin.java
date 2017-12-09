@@ -213,14 +213,14 @@ public class Admin extends javax.swing.JFrame {
 	{
 	    String studentId = cmbBoxTeachers.getItemAt(cmbBoxTeachers.getSelectedIndex());
 	    this.setVisible(false);
-	    new EditStudent().setVisible(true);
+	    new AddStudent().setVisible(true);
 	}
     }//GEN-LAST:event_btnSubmitEditStudentActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        new EditStudent().setVisible(true); 
+        new AddStudent().setVisible(true); 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

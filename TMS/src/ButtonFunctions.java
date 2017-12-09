@@ -36,7 +36,7 @@ public class ButtonFunctions
 	    error.setText("Student not found");
 	}
     }
-    
+    /*
     public static void editStudentButton(JFrame caller, JLabel error, JTextField txtField)
     {
 	int studentId;
@@ -56,5 +56,5 @@ public class ButtonFunctions
 	{
 	    error.setText("Student not found");
 	}
-    }
+    }*/
 }
