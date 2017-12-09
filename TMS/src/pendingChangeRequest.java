@@ -125,7 +125,11 @@ public class pendingChangeRequest extends javax.swing.JFrame
     }//GEN-LAST:event_btnClosePopupActionPerformed
 
     private void btnResolveChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolveChangeActionPerformed
-        // TODO add your handling code here:
+       
+       DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+       int SelectedRow = jTable1.getSelectedRow();
+       model.removeRow(SelectedRow);
+       ChangeRequestFile.addChangeRequest(cng, "log.dat");
     }//GEN-LAST:event_btnResolveChangeActionPerformed
 
     /**
