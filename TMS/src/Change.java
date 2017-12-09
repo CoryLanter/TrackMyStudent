@@ -109,8 +109,8 @@ public class Change implements Serializable
     public String toString()
     {
 	return "From: " + this.getName() + ". Student Id: "
-		+ this.getStudentID() + ". Comment: " + this.getTxtBlock() + "."
-		+ " Date of Submission: " + this.getReqDate() + ".";
+		+ this.getStudentID() + ". Field to Edit " + this.getFieldToEdit() + "."
+		+ " Comment: " + this.getTxtBlock() + "." + "Date: " + this.getReqDate();
     }
 }
 

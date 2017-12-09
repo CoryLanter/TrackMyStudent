@@ -44,14 +44,13 @@ public class ChangeRequestFile
     {
 	ArrayList<Change> changes = new ArrayList<>();
 	ObjectInputStream in;
-	Change change;
-	
+        
 	try
 	{
 	    in = new ObjectInputStream(new FileInputStream(fileName));
 	    while(true)
 	    {
-		change = (Change) in.readObject();
+		changes.add((Change) in.readObject());
 	    }
 	}
 	catch(EOFException eof)

@@ -11,11 +11,26 @@ public class pendingChangeRequest extends javax.swing.JFrame
     private ArrayList<Change> changes;
     private Change cng;
     
-    public pendingChangeRequest()
+        public pendingChangeRequest()
     {
         changes = ChangeRequestFile.readChangeRequests("pendingChangeRequests.dat");
-	initComponents();           
+	initComponents();
+        addRowToTable();
     } 
+    public void addRowToTable(){
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        ArrayList<Change> list = ChangeRequestFile.readChangeRequests("pendingChangeRequests.dat");
+        Object rowData[] = new Object[5];
+        for(int i= 0; i < list.size(); i++){
+            rowData[0] = list.get(i).getName();
+            rowData[0] = list.get(i).getStudentID();
+            rowData[0] = list.get(i).getFieldToEdit();
+            rowData[0] = list.get(i).getTxtBlock();
+            rowData[0] = list.get(i).getReqDate();
+            model.addRow(rowData);
+        }
+    }
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -70,15 +85,20 @@ public class pendingChangeRequest extends javax.swing.JFrame
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Name", "Student ID", "Field to Edit", "Comment", "Date Submitted"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
