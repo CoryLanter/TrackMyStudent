@@ -50,14 +50,14 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="textField2" pref="140" max="32767" attributes="0"/>
-                          <Component id="textField3" max="32767" attributes="0"/>
-                          <Component id="textField4" max="32767" attributes="0"/>
-                          <Component id="textField5" max="32767" attributes="0"/>
-                          <Component id="textField6" max="32767" attributes="0"/>
-                          <Component id="textField7" max="32767" attributes="0"/>
-                          <Component id="textField8" max="32767" attributes="0"/>
-                          <Component id="textField9" max="32767" attributes="0"/>
+                          <Component id="inputName" pref="140" max="32767" attributes="0"/>
+                          <Component id="inputStudentID" max="32767" attributes="0"/>
+                          <Component id="inputTeacher" max="32767" attributes="0"/>
+                          <Component id="inputAllergies" max="32767" attributes="0"/>
+                          <Component id="inputMedications" max="32767" attributes="0"/>
+                          <Component id="inputAbsences" max="32767" attributes="0"/>
+                          <Component id="inputGrades" max="32767" attributes="0"/>
+                          <Component id="inputSchedule" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -80,36 +80,36 @@
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="lblName" max="32767" attributes="0"/>
-                  <Component id="textField2" max="32767" attributes="0"/>
+                  <Component id="inputName" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="textField3" max="32767" attributes="0"/>
+                  <Component id="inputStudentID" max="32767" attributes="0"/>
                   <Component id="lblStudentID" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="textField4" max="32767" attributes="0"/>
+                  <Component id="inputTeacher" max="32767" attributes="0"/>
                   <Component id="lblTeacher" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="textField5" max="32767" attributes="0"/>
+                  <Component id="inputAllergies" max="32767" attributes="0"/>
                   <Component id="lblAllergies" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="textField6" max="32767" attributes="0"/>
+                  <Component id="inputMedications" max="32767" attributes="0"/>
                   <Component id="lblMedications" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="textField7" max="32767" attributes="0"/>
+                  <Component id="inputAbsences" max="32767" attributes="0"/>
                   <Component id="lblAbsences" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="textField8" max="32767" attributes="0"/>
+                  <Component id="inputGrades" max="32767" attributes="0"/>
                   <Component id="lblGrades" max="32767" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -123,7 +123,7 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="textField9" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="inputSchedule" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -206,56 +206,56 @@
         <Property name="text" type="java.lang.String" value="Schedule:"/>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField2">
+    <Component class="java.awt.TextField" name="inputName">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="&quot;&quot; + stu.getName()" type="code"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField3">
+    <Component class="java.awt.TextField" name="inputStudentID">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="&quot;&quot; + stu.getStudentId()" type="code"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField4">
+    <Component class="java.awt.TextField" name="inputTeacher">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="&quot;&quot; + stu.getTeacher()" type="code"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField5">
+    <Component class="java.awt.TextField" name="inputAllergies">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="&quot;&quot; + stu.getAllergies()" type="code"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField6">
+    <Component class="java.awt.TextField" name="inputMedications">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="&quot;&quot; + stu.getMedications()" type="code"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField7">
+    <Component class="java.awt.TextField" name="inputAbsences">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="&quot;&quot; + stu.getAbsences()" type="code"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField8">
+    <Component class="java.awt.TextField" name="inputGrades">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="&quot;&quot; + stu.getAvgGrade()" type="code"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField9">
+    <Component class="java.awt.TextField" name="inputSchedule">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="&quot;&quot; + stu.getBlock()" type="code"/>
