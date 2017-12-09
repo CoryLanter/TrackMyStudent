@@ -16,10 +16,13 @@ public class EditStudent extends javax.swing.JFrame {
      * Creates new form viewStudent
      */
     
-    public EditStudent(int studentId){
+    public EditStudent() {
         initComponents();
-        Student student = new Student("",0,"","","","","","",0);
-        student = StudentFile.readStudentById(studentId);
+    }
+    
+    public EditStudent(int studentId){
+        //Student student = new Student("",0,"","","","","","",0);
+        stu = StudentFile.readStudentById(studentId);
         
     }
 
