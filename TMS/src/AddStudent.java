@@ -205,10 +205,7 @@ public class AddStudent extends javax.swing.JFrame {
     }//GEN-LAST:event_inputGradesActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        // TODO add your handling code here:
-        //Need code here to make the edit save to student.txt and go to log/backup log
-     //   this.setVisible(false);
-     //   new ().setVisible(true);
+
             
         Student student = new Student("",0,"","","","","","",0);
             student.setName(inputName.getText());

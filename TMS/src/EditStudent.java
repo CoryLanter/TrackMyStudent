@@ -54,6 +54,7 @@ public class EditStudent extends javax.swing.JFrame {
         inputAbsences = new java.awt.TextField();
         inputGrades = new java.awt.TextField();
         inputSchedule = new java.awt.TextField();
+        btnDeleteStudent = new javax.swing.JButton();
 
         textField1.setText("textField1");
 
@@ -112,6 +113,13 @@ public class EditStudent extends javax.swing.JFrame {
 
         inputSchedule.setText("" + stu.getBlock());
 
+        btnDeleteStudent.setText("Delete Student");
+        btnDeleteStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteStudentActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -144,10 +152,15 @@ public class EditStudent extends javax.swing.JFrame {
                             .addComponent(inputSchedule, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addComponent(btnSubmit)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                        .addComponent(btnMainMenu)
-                        .addGap(45, 45, 45)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnDeleteStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnSubmit)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                                .addComponent(btnMainMenu)
+                                .addGap(45, 45, 45)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLogout)
                 .addContainerGap())
@@ -199,7 +212,9 @@ public class EditStudent extends javax.swing.JFrame {
                         .addComponent(btnSubmit)
                         .addComponent(btnLogout))
                     .addComponent(btnMainMenu))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnDeleteStudent)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
@@ -253,6 +268,12 @@ public class EditStudent extends javax.swing.JFrame {
         new Login().setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
+    private void btnDeleteStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteStudentActionPerformed
+        this.setVisible(false);
+        new Admin().setVisible(true);
+        StudentFile.deleteStudent(Integer.parseInt(inputStudentID.getText()));    
+    }//GEN-LAST:event_btnDeleteStudentActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -304,6 +325,7 @@ public class EditStudent extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDeleteStudent;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMainMenu;
     private javax.swing.JButton btnSubmit;
