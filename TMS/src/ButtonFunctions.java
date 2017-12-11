@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import javax.swing.JFrame;
@@ -37,21 +36,23 @@ public class ButtonFunctions
 	    error.setText("Student not found");
 	}
     }
-    public static int findId(){
+    public static int findId()
+    {
         int count = 1;
         int k = 0;
         Change cng;
-       ArrayList<Change> list = ChangeRequestFile.readChangeRequests("pendingChangeRequests.dat");
+	ArrayList<Change> list = ChangeRequestFile.readChangeRequests("pendingChangeRequests.dat");
         while(k != list.size())
         {
             for(int i = 0; i < list.size(); i++)
             {
-                if(list.get(i).getChangeId() == count ) 
+                if(list.get(i).getChangeId() == count) 
                 {
                     count++;
                     k=0;
                 }
-                else{
+                else
+		{
                     k++; 
                 }
                 
