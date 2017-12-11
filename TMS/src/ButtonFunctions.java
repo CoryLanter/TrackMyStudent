@@ -31,7 +31,7 @@ public class ButtonFunctions
 	    caller.setVisible(false);
 	    new viewStudent(stu).setVisible(true);
 	}
-	catch(InputMismatchException e)
+	catch(NumberFormatException | InputMismatchException e)
 	{
 	    error.setText("Student not found");
 	}
