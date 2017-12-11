@@ -96,7 +96,45 @@ public class ButtonFunctions
 	{
 	    error.setText("Input not valid");
 	}
+    }
+    
+    public static void jEditStudentSubmitButton(JFrame caller, JLabel error, 
+	    JTextField txtName, JTextField txtStudentId, JTextField txtTeacher,
+	    JTextField txtAllergies, JTextField txtMedications,
+	    JTextField txtAbsences, JTextField txtAvgGrade,
+	    JTextField txtSchedule)
+    {
+	Student stu;
+	String name;
+	int studentId;
+	String teacher;
+	String allergies;
+	String medications;
+	int absenses;
+	String avgGrade;
+	String schedule;
 	
+	try
+	{
+	    name = txtName.getText();
+	    studentId = Integer.parseInt(txtStudentId.getText());
+	    teacher = txtTeacher.getText();
+	    allergies = txtAllergies.getText();
+	    medications = txtMedications.getText();
+	    absenses = Integer.parseInt(txtAbsences.getText());
+	    avgGrade = txtAvgGrade.getText();
+	    schedule = txtSchedule.getText();
+	    
+	    stu = new Student(name, studentId, teacher, allergies, medications,
+		    "", avgGrade, schedule, absenses);
+	    StudentFile.editStudent(stu);
+	    caller.setVisible(false);
+	    new viewStudent(stu).setVisible(true);
+	}
+	catch(NumberFormatException e)
+	{
+	    error.setText("Input not valid");
+	}
     }
     
     public static int findId()

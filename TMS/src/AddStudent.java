@@ -1,4 +1,7 @@
 
+import java.awt.TextField;
+
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -29,7 +32,8 @@ public class AddStudent extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         lblName = new javax.swing.JLabel();
         lblAllergies = new javax.swing.JLabel();
@@ -51,6 +55,7 @@ public class AddStudent extends javax.swing.JFrame {
         inputAbsences = new javax.swing.JTextField();
         inputGrades = new javax.swing.JTextField();
         inputSchedule = new javax.swing.JTextField();
+        lblError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,33 +74,43 @@ public class AddStudent extends javax.swing.JFrame {
         lblTeacher.setText("Teacher:");
 
         btnSubmit.setText("Submit");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSubmit.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnSubmitActionPerformed(evt);
             }
         });
 
         btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnLogout.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnLogoutActionPerformed(evt);
             }
         });
 
         btnMainMenu.setText("Main Menu");
-        btnMainMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnMainMenu.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnMainMenuActionPerformed(evt);
             }
         });
 
         lblSchedule.setText("Schedule:");
 
-        inputGrades.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        inputGrades.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 inputGradesActionPerformed(evt);
             }
         });
+
+        lblError.setForeground(new java.awt.Color(204, 0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,18 +147,19 @@ public class AddStudent extends javax.swing.JFrame {
                                 .addComponent(lblSchedule)
                                 .addGap(25, 25, 25)
                                 .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                                 .addComponent(inputSchedule, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblName)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(inputName, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
+                        .addContainerGap()
                         .addComponent(btnSubmit)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                        .addComponent(btnMainMenu)
-                        .addGap(45, 45, 45)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnMainMenu)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLogout)
                 .addContainerGap())
@@ -191,9 +207,11 @@ public class AddStudent extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnLogout)
+                        .addComponent(btnMainMenu))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnSubmit)
-                        .addComponent(btnLogout))
-                    .addComponent(btnMainMenu))
+                        .addComponent(lblError, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -205,22 +223,9 @@ public class AddStudent extends javax.swing.JFrame {
     }//GEN-LAST:event_inputGradesActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-
-            
-        Student student = new Student("",0,"","","","","","",0);
-            student.setName(inputName.getText());
-            student.setStudentId(Integer.parseInt(inputStudentID.getText()));
-            student.setTeacher(inputTeacher.getText());
-            student.setAllergies(inputAllergies.getText());
-            student.setMedications(inputMedications.getText());
-            student.setAbsences(Integer.parseInt(inputAbsences.getText()));
-            student.setAvgGrade(inputGrades.getText());
-            student.setBlock(inputSchedule.getText());
-           
-            StudentFile.addStudent(student);
-            this.setVisible(false);
-            new viewStudent(student).setVisible(true);
-        //}
+	ButtonFunctions.jEditStudentSubmitButton(this, lblError, inputName,
+		inputStudentID, inputTeacher, inputAllergies, inputMedications,
+		inputAbsences, inputGrades, inputSchedule);
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
@@ -312,6 +317,7 @@ public class AddStudent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblAbsences;
     private javax.swing.JLabel lblAllergies;
+    private javax.swing.JLabel lblError;
     private javax.swing.JLabel lblGrades;
     private javax.swing.JLabel lblMedications;
     private javax.swing.JLabel lblName;
