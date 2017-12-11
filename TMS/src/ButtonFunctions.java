@@ -1,3 +1,4 @@
+import java.awt.TextField;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import javax.swing.JFrame;
@@ -36,6 +37,68 @@ public class ButtonFunctions
 	    error.setText("Student not found");
 	}
     }
+    
+    public static void editStudentButton(JFrame caller, JLabel error, JTextField txtField)
+    {
+	int studentId;
+	Student stu;
+	
+	try
+	{
+	    studentId = Integer.parseInt(txtField.getText());
+	    if((stu = StudentFile.readStudentById(studentId)) == null)
+	    {
+		throw new InputMismatchException();
+	    }
+	    caller.setVisible(false);
+	    new EditStudent(stu).setVisible(true);
+	}
+	catch(NumberFormatException | InputMismatchException e)
+	{
+	    error.setText("Student not found");
+	}
+    }
+    
+    public static void editStudentSubmitButton(JFrame caller, JLabel error, 
+	    TextField txtName, TextField txtStudentId, TextField txtTeacher,
+	    TextField txtAllergies, TextField txtMedications,
+	    TextField txtAbsences, TextField txtAvgGrade,
+	    TextField txtSchedule)
+    {
+	Student stu;
+	String name;
+	int studentId;
+	String teacher;
+	String allergies;
+	String medications;
+	int absenses;
+	String avgGrade;
+	String schedule;
+	
+	try
+	{
+	    name = txtName.getText();
+	    studentId = Integer.parseInt(txtStudentId.getText());
+	    teacher = txtTeacher.getText();
+	    allergies = txtAllergies.getText();
+	    medications = txtMedications.getText();
+	    absenses = Integer.parseInt(txtAbsences.getText());
+	    avgGrade = txtAvgGrade.getText();
+	    schedule = txtSchedule.getText();
+	    
+	    stu = new Student(name, studentId, teacher, allergies, medications,
+		    "", avgGrade, schedule, absenses);
+	    StudentFile.editStudent(stu);
+	    caller.setVisible(false);
+	    new viewStudent(stu).setVisible(true);
+	}
+	catch(NumberFormatException e)
+	{
+	    error.setText("Input not valid");
+	}
+	
+    }
+    
     public static int findId()
     {
         int count = 1;
@@ -55,10 +118,8 @@ public class ButtonFunctions
 		{
                     k++; 
                 }
-                
             }
-            
         }
-        return count; 
+        return count;
     }
 }

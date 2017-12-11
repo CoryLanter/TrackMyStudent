@@ -19,8 +19,8 @@ public class EditStudent extends javax.swing.JFrame {
         initComponents();
     }
     
-    public EditStudent(int studentId){
-        stu = StudentFile.readStudentById(studentId);
+    public EditStudent(Student student){
+        stu = student;
         initComponents();
     }
 
@@ -56,6 +56,7 @@ public class EditStudent extends javax.swing.JFrame {
         inputGrades = new java.awt.TextField();
         inputSchedule = new java.awt.TextField();
         btnDeleteStudent = new javax.swing.JButton();
+        lblError = new javax.swing.JLabel();
 
         textField1.setText("textField1");
 
@@ -69,7 +70,7 @@ public class EditStudent extends javax.swing.JFrame {
 
         lblAbsences.setText("Absences:");
 
-        lblGrades.setText("Grades:");
+        lblGrades.setText("Grade:");
 
         lblStudentID.setText("Student ID:");
 
@@ -129,6 +130,8 @@ public class EditStudent extends javax.swing.JFrame {
             }
         });
 
+        lblError.setForeground(new java.awt.Color(204, 0, 0));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -164,6 +167,8 @@ public class EditStudent extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnDeleteStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblError, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnSubmit)
@@ -222,7 +227,9 @@ public class EditStudent extends javax.swing.JFrame {
                         .addComponent(btnLogout))
                     .addComponent(btnMainMenu))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnDeleteStudent)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDeleteStudent)
+                    .addComponent(lblError, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
@@ -232,25 +239,7 @@ public class EditStudent extends javax.swing.JFrame {
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
         //Need code here to make the edit save to student.txt and go to log/backup log
-     //   this.setVisible(false);
-     //   new ().setVisible(true);
-            StudentFile.deleteStudent(stu.getStudentId());
-     
-            Student student = new Student("",0,"","","","","","",0);
-            student.setName(inputName.getText());
-            student.setStudentId(Integer.parseInt(inputStudentID.getText()));
-            student.setTeacher(inputTeacher.getText());
-            student.setAllergies(inputAllergies.getText());
-            student.setMedications(inputMedications.getText());
-            student.setAbsences(Integer.parseInt(inputAbsences.getText()));
-            student.setAvgGrade(inputGrades.getText());
-            student.setBlock(inputSchedule.getText());
-           
-            StudentFile.addStudent(student);
-            this.setVisible(false);
-            new viewStudent(student).setVisible(true);
-     
-        //}
+        ButtonFunctions.editStudentSubmitButton(this, lblError, inputName, inputStudentID, inputTeacher, inputAllergies, inputMedications, inputAbsences, inputGrades, inputSchedule);
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
@@ -349,6 +338,7 @@ public class EditStudent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblAbsences;
     private javax.swing.JLabel lblAllergies;
+    private javax.swing.JLabel lblError;
     private javax.swing.JLabel lblGrades;
     private javax.swing.JLabel lblMedications;
     private javax.swing.JLabel lblName;

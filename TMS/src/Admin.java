@@ -234,7 +234,7 @@ public class Admin extends javax.swing.JFrame {
 
     private void btnSubmitEditStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitEditStudentActionPerformed
         // TODO add your handling code here:
-        ButtonFunctions.viewStudentButton(this, lblError1, inputEditStudent);
+        ButtonFunctions.editStudentButton(this, lblError1, inputEditStudent);
     }//GEN-LAST:event_btnSubmitEditStudentActionPerformed
 
     private void btnAddStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddStudentActionPerformed
